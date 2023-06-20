@@ -87,10 +87,3 @@ class SyberiaObjectiveZone_PSI100 : SyberiaObjectiveZone
     radius=100;
     psi=1.0;
 };
-
-class SyberiaObjectiveZone_Toxic100 : SyberiaObjectiveZone
-{
-    scope=1;
-    radius=100;
-    gas=1.0;
-};

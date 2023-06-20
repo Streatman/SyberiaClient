@@ -4,8 +4,6 @@ modded class MissionGameplay
 	ref Widget m_AdditionHudRootWidget = null;
 	ref SyberiaAdditionalHud m_SyberiaAdditionalHud = null;
 	ref array<int> m_pressedKeys;
-	ref array<ref ToxicZoneView> m_toxicZonesView;
-	float m_toxicZoneUpdateTimer;
 	bool m_isPveIntruderLast;
 	
 	override void OnMissionStart()
@@ -13,7 +11,6 @@ modded class MissionGameplay
 		SybLog("MissionGameplay OnMissionStart");
 		super.OnMissionStart();
 		m_pressedKeys = new array<int>;
-		m_toxicZoneUpdateTimer = 0;
 		m_isPveIntruderLast = false;
 				
 		PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_CONCUSSION).Start();
@@ -41,15 +38,6 @@ modded class MissionGameplay
 		delete m_AdditionHudRootWidget;
 		delete m_SyberiaAdditionalHud;
 		delete m_pressedKeys;
-		
-		if (m_toxicZonesView)
-		{
-			foreach (ref ToxicZoneView dtz : m_toxicZonesView)
-			{
-				delete dtz;
-			}
-			delete m_toxicZonesView;
-		}
 	}
 	
 	override void OnInit()
@@ -110,7 +98,6 @@ modded class MissionGameplay
 		}
 		
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_SCREEN_MESSAGE, this, "OnScreenMessageRpc");
-		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_SYNC_TOXIC_ZONES, this, "OnSyncToxicZone");
 	}
 	
 	override void OnUpdate(float timeslice)
@@ -120,19 +107,6 @@ modded class MissionGameplay
 		PlayerBase player = PlayerBase.Cast( GetGame().GetPlayer() );
 		if (player && player.GetSybStats())
 		{
-			if (m_toxicZonesView)
-			{
-				m_toxicZoneUpdateTimer = m_toxicZoneUpdateTimer - timeslice;
-				if (m_toxicZoneUpdateTimer <= 0.0)
-				{
-					m_toxicZoneUpdateTimer = 5.0;
-					foreach (ref ToxicZoneView tzv : m_toxicZonesView)
-					{
-						tzv.Update(player);
-					}
-				}
-			}
-			
 			UIScriptedMenu menu = m_UIManager.GetMenu();
 			
 			if (m_SyberiaAdditionalHud && m_LifeState == EPlayerStates.ALIVE && !player.IsUnconscious() )
@@ -435,31 +409,6 @@ modded class MissionGameplay
 			watermarkWidget.RemoveChild(watermarkBase);
 			ingameMenu.GetLayoutRoot().AddChild(watermarkBase, true);
 			delete watermarkWidget;
-		}
-	}
-	
-	void OnSyncToxicZone(ParamsReadContext ctx, PlayerIdentity sender)
-	{
-		Param1<ref array<ref ToxicZone>> clientData;
-		if ( !ctx.Read( clientData ) ) return;
-		
-		if (m_toxicZonesView)
-		{
-			foreach (ref ToxicZoneView zoneToDelete : m_toxicZonesView)
-			{
-				delete zoneToDelete;
-			}
-			delete m_toxicZonesView;
-		}
-		
-		ref array<ref ToxicZone> toxicZonesInfo = clientData.param1;
-		m_toxicZonesView = new array<ref ToxicZoneView>;
-		if (toxicZonesInfo)
-		{
-			foreach (ref ToxicZone zone : toxicZonesInfo)
-			{
-				m_toxicZonesView.Insert(new ToxicZoneView(zone.m_position, zone.m_radius));
-			}
 		}
 	}
 };
