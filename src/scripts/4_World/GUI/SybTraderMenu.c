@@ -452,7 +452,7 @@ class SybTraderMenu extends UIScriptedMenu
 		InitializeFilter(layoutRoot, "other");
 		
 		m_active = true;
-        return layoutRoot;
+	return layoutRoot;
 	}
 	
 	override void Update(float timeslice)

@@ -2,7 +2,7 @@ modded class TentBase
 {
     override void SetActions()
     {
-        super.SetActions();
-        AddAction(ActionSleep);
+	super.SetActions();
+	AddAction(ActionSleep);
     }
 };

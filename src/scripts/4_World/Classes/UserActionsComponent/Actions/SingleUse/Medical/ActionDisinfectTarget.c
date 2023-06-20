@@ -24,8 +24,8 @@ modded class ActionDisinfectTarget
 {
     override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
 	{
-        if (player.IsInteractionWithPlayersBlocked())
-            return false;
+	if (player.IsInteractionWithPlayersBlocked())
+	    return false;
 
 		if (target && target.GetObject())
 		{

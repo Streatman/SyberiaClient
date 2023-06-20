@@ -90,7 +90,7 @@ class ScreenEquip extends ScreenBase
 		m_updatePlayerPreview = true;
 			
 		m_playerPreview.SetPlayer(GetGame().GetPlayer());				
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	override void Update(float timeslice)

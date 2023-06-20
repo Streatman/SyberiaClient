@@ -18,7 +18,7 @@ class PluginAdminTool extends PluginBase
 	override void OnInit()
 	{
 		m_openNoSpamTimer = GetGame().GetTime();
-        GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_ADMINTOOL_OPEN, this, "RequestOpen");
+	GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_ADMINTOOL_OPEN, this, "RequestOpen");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_ADMINTOOL_PLAYERINFO, this, "PlayerInfo");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_ADMINTOOL_PLAYERUPDATE, this, "PlayerUpdate");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_ADMINTOOL_SPAWNITEM, this, "SpawnItem");
@@ -112,10 +112,10 @@ class PluginAdminTool extends PluginBase
 		if (GetGame().IsServer() || IsOpen()) return;		
 		if (GetGame().GetUIManager().GetMenu() != NULL) return;
 		
-        if (!m_guiMenu) m_guiMenu = new AdminToolMenu;
+	if (!m_guiMenu) m_guiMenu = new AdminToolMenu;
 		
 		Param1< ref PluginAdminTool_OpenContext > serverData;
-        if ( !ctx.Read( serverData ) ) return;
+	if ( !ctx.Read( serverData ) ) return;
 		
 		m_adminPermissions = true;
 		m_guiMenu.m_selectedTabId = m_selectedTabId;
@@ -129,7 +129,7 @@ class PluginAdminTool extends PluginBase
 		if (GetGame().IsServer() || !IsOpen() || !m_guiMenu) return;		
 		
 		Param1< ref PluginAdminTool_PlayerContextDetails > serverData;
-        if ( !ctx.Read( serverData ) ) return;
+	if ( !ctx.Read( serverData ) ) return;
 		
 		m_guiMenu.UpdatePlayerContext(serverData.param1);
 	}
@@ -145,7 +145,7 @@ class PluginAdminTool extends PluginBase
 		if (GetGame().IsServer() || !IsOpen() || !m_guiMenu) return;		
 		
 		Param1< ref PluginAdminTool_MapContext > serverData;
-        if ( !ctx.Read( serverData ) ) return;
+	if ( !ctx.Read( serverData ) ) return;
 		
 		m_guiMenu.UpdateMapTab(serverData.param1);
 	}
@@ -194,7 +194,7 @@ class PluginAdminTool extends PluginBase
 		
 		m_espSynchPending = false;
 		Param1< ref PluginAdminTool_MapContext > serverData;
-        if ( !ctx.Read( serverData ) ) return;
+	if ( !ctx.Read( serverData ) ) return;
 		
 		if (m_espSynchContext) delete m_espSynchContext;
 		m_espSynchContext = serverData.param1;
@@ -215,7 +215,7 @@ class PluginAdminTool extends PluginBase
 	void PlayerMessage( ParamsReadContext ctx, PlayerIdentity sender ) 
 	{
 		Param1< string > serverData;
-        if ( !ctx.Read( serverData ) ) return;
+	if ( !ctx.Read( serverData ) ) return;
 		
 		if (!m_adminMessageBox)
 		{

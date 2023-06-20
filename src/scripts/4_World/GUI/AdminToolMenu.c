@@ -274,7 +274,7 @@ class AdminToolMenu extends UIScriptedMenu
 		m_tabBodies.Insert(layoutRoot.FindAnyWidget("EspTabBody"));
 		
 		m_active = true;
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	void InitEspLootFilter(string name, typename filter, int color)

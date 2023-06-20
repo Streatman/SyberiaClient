@@ -42,9 +42,9 @@ class ActionInjectSyringeTarget: ActionSingleUseBase
 	
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
 	{
-        if (player.IsInteractionWithPlayersBlocked())
-            return false;
-        
+	if (player.IsInteractionWithPlayersBlocked())
+	    return false;
+	
 		return CheckBlockerActionCondition(player, target, item) && super.ActionCondition(player, target, item);
 	}
 	
@@ -59,7 +59,7 @@ class ActionInjectSyringeTarget: ActionSingleUseBase
 			}
 		}
 		
-        action_data.m_MainItem.SetCleanness(0);
+	action_data.m_MainItem.SetCleanness(0);
 		action_data.m_Player.ServerReplaceItemWithNew(new ReplaceItemWithNewLambda(action_data.m_MainItem, "SyringeEmpty", action_data.m_Player));
 	}
 	override void OnExecuteClient( ActionData action_data )

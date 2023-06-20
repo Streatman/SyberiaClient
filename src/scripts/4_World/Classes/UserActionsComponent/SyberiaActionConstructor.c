@@ -16,7 +16,7 @@ modded class ActionConstructor
 		actions.Insert(ActionCheckName);
 		actions.Insert(ActionSayName);
 		actions.Insert(ActionSleep);
-        actions.Insert(ActionCutBookPage);
+	actions.Insert(ActionCutBookPage);
 		actions.Insert(ActionPlugStethoscope);
 		actions.Insert(ActionStethoscopeInspect);
 		actions.Insert(ActionDebugBuildingToolNext);
@@ -30,9 +30,9 @@ modded class ActionConstructor
 		actions.Insert(ActionDebugBuildingToolSizer);
 		actions.Insert(ActionSearchTargetInventory);
 		actions.Insert(ActionTraderInteract);
-        actions.Insert(ActionWashFruitsWell);
+	actions.Insert(ActionWashFruitsWell);
 		actions.Insert(ActionWashFruitsWater);
-        actions.Insert(ActionHomebookClaimOwnership);
-        actions.Insert(ActionOpenHomebook);
+	actions.Insert(ActionHomebookClaimOwnership);
+	actions.Insert(ActionOpenHomebook);
 	}
 };

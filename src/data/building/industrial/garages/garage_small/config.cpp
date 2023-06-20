@@ -17,24 +17,24 @@ class CfgVehicles
 	
 	class Land_Garage_Small_Livespace0: BuildingLivespace
     {
-        simpleHiddenSelections[] = {
-            "barricade_l1",
+	simpleHiddenSelections[] = {
+	    "barricade_l1",
 			"barricade_l2",
 			"barricade_l3",
-            "d1_l1",
-            "d1_l2",
-            "d1_l3",
-            "d2_l1",
-            "d2_l2",
-            "d2_l3",
-            "d3_l1",
-            "d12_l1",
-            "d12_l2",
-            "d12_l3",
+	    "d1_l1",
+	    "d1_l2",
+	    "d1_l3",
+	    "d2_l1",
+	    "d2_l2",
+	    "d2_l3",
+	    "d3_l1",
+	    "d12_l1",
+	    "d12_l2",
+	    "d12_l3",
 			"w1",
-            "homebook"
-        };
-        model="\SyberiaScripts\data\building\industrial\garages\garage_small\garage_small_livespace0.p3d";
+	    "homebook"
+	};
+	model="\SyberiaScripts\data\building\industrial\garages\garage_small\garage_small_livespace0.p3d";
 		class Doors
 		{
 			class DoorsTwin1
@@ -179,26 +179,26 @@ class CfgBuildingInfo
 {
     class Land_Garage_Small
     {
-        class Livespace0
-        {
-            //debug = 1;  // разметка
+	class Livespace0
+	{
+	    //debug = 1;  // разметка
 			bboxStart[] = {6.13555, -2.73677, -7.8543}; // Bounding box min 
-            bboxEnd[] = {-6.95293, 2.20354, 7.9916}; // Bounding box max
-            classname = "Land_Garage_Small_Livespace0"; // Classname of livespace object
-            offset[] = { 0.379883, 0.23674, 0.429688 }; // Livespace object offset on spawn 0.379883, 0.23674, 0.429688
-            homebook = "homebook";
-            class Door0
-            {
-                selfDoorId = 0; // ID of this door of livespace. (Check by DebugBuildingTool)0
-                linkedDoorIds[] = { 0 }; // ID of vanilla house doors. Empty if not exist.0
-                outerDoor = 1; // Is door from house to outside world
-                levels[] = {  "d12_l1", "d12_l2" }; // Selection in p3d relative to this door for each level
-            };
-            class Barricade0
-            {
-                component="w1";
+	    bboxEnd[] = {-6.95293, 2.20354, 7.9916}; // Bounding box max
+	    classname = "Land_Garage_Small_Livespace0"; // Classname of livespace object
+	    offset[] = { 0.379883, 0.23674, 0.429688 }; // Livespace object offset on spawn 0.379883, 0.23674, 0.429688
+	    homebook = "homebook";
+	    class Door0
+	    {
+		selfDoorId = 0; // ID of this door of livespace. (Check by DebugBuildingTool)0
+		linkedDoorIds[] = { 0 }; // ID of vanilla house doors. Empty if not exist.0
+		outerDoor = 1; // Is door from house to outside world
+		levels[] = {  "d12_l1", "d12_l2" }; // Selection in p3d relative to this door for each level
+	    };
+	    class Barricade0
+	    {
+		component="w1";
 				levels[] = { "barricade_l1", "barricade_l2" }; // Selection in p3d relative to this barricade for each level
-            };
-        };
+	    };
+	};
     };
 };

@@ -72,7 +72,7 @@ class GearPDAMenu extends UIScriptedMenu
     {
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "SyberiaScripts/layout/GearPDAMenu.layout" );
 
-        m_contactList = TextListboxWidget.Cast( layoutRoot.FindAnyWidget( "contact_list" ) );
+	m_contactList = TextListboxWidget.Cast( layoutRoot.FindAnyWidget( "contact_list" ) );
 		m_yourIdText = TextWidget.Cast( layoutRoot.FindAnyWidget( "your_id_text" ) );
 		m_addContactTxt = EditBoxWidget.Cast( layoutRoot.FindAnyWidget( "add_contact_txt" ) );
 		m_addContactBtn = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "add_contact_btn" ) );
@@ -134,7 +134,7 @@ class GearPDAMenu extends UIScriptedMenu
 		
 		delete request;
 		m_active = true;		
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	void EnableGroupManagement(ref array<ref SyberiaPdaGroupMember> members, string infoText)

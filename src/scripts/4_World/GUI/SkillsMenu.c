@@ -68,7 +68,7 @@ class SkillsMenu extends UIScriptedMenu
 		
 		m_active = true;
 		m_dirty = true;
-        return layoutRoot;
+	return layoutRoot;
     }
 
 	private void UpdateSkillsList()

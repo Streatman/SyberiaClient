@@ -17,7 +17,7 @@ class CfgVehicles
 	
 	class Land_House_1W04_Livespace0: BuildingLivespace
     {
-        simpleHiddenSelections[] = {
+	simpleHiddenSelections[] = {
 			"d1_l1",
 			"d1_l2",
 			"d1_l3",
@@ -34,7 +34,7 @@ class CfgVehicles
 			"w2",
 			"marc",
 			"homebook"
-        };
+	};
 		model="\SyberiaScripts\data\building\Land_House\house_1w04\house_1w04_livespace0.p3d";
 		class Doors
 		{

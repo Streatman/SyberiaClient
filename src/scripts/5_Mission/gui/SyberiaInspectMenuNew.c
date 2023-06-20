@@ -7,25 +7,25 @@ modded class InspectMenuNew
 		if( item_base && item_base.IsTemperatureVisible() )
 		{
 			float temperature = item_base.GetTemperature();
-            if ( temperature > 100 )
-            {
-                temperature = 100 * Math.Floor( temperature / 100.0 );
-            }
+	    if ( temperature > 100 )
+	    {
+		temperature = 100 * Math.Floor( temperature / 100.0 );
+	    }
 			else if ( temperature > 10 )
 			{
 				temperature = 10 * Math.Floor( temperature / 10.0 );
 			}
-            else
+	    else
 			{
 				temperature = 5 * Math.Floor( temperature / 5.0 );
 			}
-            
-            WidgetTrySetText(root_widget, "ItemTemperatureWidget",  "#inv_inspect_about " + temperature.ToString() +  " " + "#inv_inspect_celsius", GetSyberiaTemperatureColor( temperature, 255 ) );
+	    
+	    WidgetTrySetText(root_widget, "ItemTemperatureWidget",  "#inv_inspect_about " + temperature.ToString() +  " " + "#inv_inspect_celsius", GetSyberiaTemperatureColor( temperature, 255 ) );
 		}
-        else
-        {
-            WidgetTrySetText(root_widget, "ItemTemperatureWidget", "");
-        }
+	else
+	{
+	    WidgetTrySetText(root_widget, "ItemTemperatureWidget", "");
+	}
 	}
 	
 	override static void UpdateItemInfoWetness(Widget root_widget, EntityAI item)

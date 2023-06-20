@@ -1,6 +1,6 @@
 class CfgPatches {
 	class SyberiaScripts {
-        units[] = {};
+	units[] = {};
 		requiredAddons[] = {"DZ_Data", "DZ_Scripts", "DZ_Gear_Medical", "DZ_Gear_Consumables"};
 	};
 };
@@ -8,8 +8,8 @@ class CfgPatches {
 class CfgMods {
 	class SyberiaScripts {
 		type = "mod";
-        author = "Terje Broygard";
-        inputs = "SyberiaScripts/inputs/inputs.xml";
+	author = "Terje Broygard";
+	inputs = "SyberiaScripts/inputs/inputs.xml";
 
 		class defs {
 			class gameScriptModule {

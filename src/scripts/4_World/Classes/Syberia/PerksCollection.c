@@ -173,261 +173,261 @@ class PerksCollection
 	
 	protected void OnInit()
 	{
-        //
-        // IMMUNITY
-        //
+	//
+	// IMMUNITY
+	//
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_INFLUENZA_TIME, "%").AddUnlockValue(1, 5).AddUnlockValue(10, 15).AddUnlockValue(20, 30).AddUnlockValue(32, 50).AddUnlockValue(47, 80).AddUnlockValue(85, 120);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_STOMATCHPOISON_TIME, "%").AddUnlockValue(1, 5).AddUnlockValue(10, 15).AddUnlockValue(20, 30).AddUnlockValue(32, 50).AddUnlockValue(47, 80).AddUnlockValue(85, 120);
-        
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_HEMATOMA_TIME, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(23, 20).AddUnlockValue(34, 30).AddUnlockValue(53, 40).AddUnlockValue(90, 50);
+	
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_HEMATOMA_TIME, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(23, 20).AddUnlockValue(34, 30).AddUnlockValue(53, 40).AddUnlockValue(90, 50);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_CUTHIT_TIME, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(23, 20).AddUnlockValue(34, 30).AddUnlockValue(53, 40).AddUnlockValue(90, 50);
-        
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_SLEEPING_TIME, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 30).AddUnlockValue(36, 50).AddUnlockValue(57, 80).AddUnlockValue(100, 120);
+	
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_SLEEPING_TIME, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 30).AddUnlockValue(36, 50).AddUnlockValue(57, 80).AddUnlockValue(100, 120);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_MENTAL_TIME, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 30).AddUnlockValue(36, 40).AddUnlockValue(57, 50).AddUnlockValue(100, 80);
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_OVERDOSE_STRONG, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 35).AddUnlockValue(36, 50).AddUnlockValue(57, 75).AddUnlockValue(100, 200);
-        
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_UNCUNSION_CHANCE, "%").AddUnlockValue(7, 2).AddUnlockValue(18, 5).AddUnlockValue(28, 10).AddUnlockValue(38, 15).AddUnlockValue(60, 20).AddUnlockValue(95, 25);
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_OVERDOSE_STRONG, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 35).AddUnlockValue(36, 50).AddUnlockValue(57, 75).AddUnlockValue(100, 200);
+	
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_UNCUNSION_CHANCE, "%").AddUnlockValue(7, 2).AddUnlockValue(18, 5).AddUnlockValue(28, 10).AddUnlockValue(38, 15).AddUnlockValue(60, 20).AddUnlockValue(95, 25);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_UNCUNSION_TIME, "%").AddUnlockValue(7, 2).AddUnlockValue(18, 5).AddUnlockValue(28, 10).AddUnlockValue(38, 15).AddUnlockValue(60, 20).AddUnlockValue(95, 25);
-        
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_HEMATOMA_CHANCE, "%").AddUnlockValue(30, 10).AddUnlockValue(43, 20).AddUnlockValue(70, 30);
+	
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_HEMATOMA_CHANCE, "%").AddUnlockValue(30, 10).AddUnlockValue(43, 20).AddUnlockValue(70, 30);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_CUTHIT_CHANCE, "%").AddUnlockValue(30, 10).AddUnlockValue(43, 20).AddUnlockValue(70, 30);
-        
+	
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_ZVIRUS_TIME, "%").AddUnlockValue(40, 15).AddUnlockValue(65, 30).AddUnlockValue(100, 120);
 		Register(SyberiaPerkType.SYBPERK_IMMUNITY_SEPSIS_TIME, "%").AddUnlockValue(40, 15).AddUnlockValue(65, 30).AddUnlockValue(100, 120);
-        
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_INFLUENZA_FIREPLACE_HEAL).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_IMMUNITY_PAIN_STRONG, " #syb_skill_level2").AddUnlockValue(100, 1);
-        
-        
-        //
-        // ATHLETICS
-        //
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_SPRINT_DEC, "%").AddUnlockValue(1, 10).AddUnlockValue(12, 20).AddUnlockValue(30, 30).AddUnlockValue(50, 40).AddUnlockValue(70, 50).AddUnlockValue(90, 70).AddUnlockValue(100, 90);
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_JOG_INC, "%").AddUnlockValue(1, 10).AddUnlockValue(12, 20).AddUnlockValue(30, 30).AddUnlockValue(50, 40).AddUnlockValue(70, 50).AddUnlockValue(90, 70).AddUnlockValue(100, 100);
-        
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_SWIM_SPRINT_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(15, 35).AddUnlockValue(35, 50).AddUnlockValue(55, 70).AddUnlockValue(75, 90);
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_SWIM_INC, "%").AddUnlockValue(3, 20).AddUnlockValue(15, 35).AddUnlockValue(35, 50).AddUnlockValue(55, 70).AddUnlockValue(75, 90);
-        
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_LADDER_SPRINT_DEC, "%").AddUnlockValue(6, 20).AddUnlockValue(18, 35).AddUnlockValue(40, 50).AddUnlockValue(60, 70).AddUnlockValue(80, 90);
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_LADDER_INC, "%").AddUnlockValue(6, 20).AddUnlockValue(18, 35).AddUnlockValue(40, 50).AddUnlockValue(60, 70).AddUnlockValue(80, 90);
-        
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_BREATH_DEC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 80).AddUnlockValue(100, 120);
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_IDDLE_INC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 80).AddUnlockValue(100, 120);
-        Register(SyberiaPerkType.SYBPERK_ATHLETICS_COLDOWN_DEC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 60).AddUnlockValue(100, 90);
-        
-        
-        //
-        // STRENGTH
-        //
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_STAMINA_KG_TO, "%").AddUnlockValue(1, 10).AddUnlockValue(18, 20).AddUnlockValue(36, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(76, 60).AddUnlockValue(88, 70).AddUnlockValue(100, 90);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_STAMINA_MAX, "%").AddUnlockValue(1, 10).AddUnlockValue(18, 20).AddUnlockValue(36, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(76, 60).AddUnlockValue(88, 70).AddUnlockValue(100, 90);
-        
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_JUMP_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_BLOCK_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
-        
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STAMINA_DEC, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STRENGTH, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
-        
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STAMINA_DEC, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STRENGTH, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
-        
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_KNOCKOUT_HEAVY_ITEMS).AddUnlockValue(100, 1);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ITEMS).AddUnlockValue(8, 1);
-        
+	
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_INFLUENZA_FIREPLACE_HEAL).AddUnlockValue(50, 1);
+	Register(SyberiaPerkType.SYBPERK_IMMUNITY_PAIN_STRONG, " #syb_skill_level2").AddUnlockValue(100, 1);
+	
+	
+	//
+	// ATHLETICS
+	//
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_SPRINT_DEC, "%").AddUnlockValue(1, 10).AddUnlockValue(12, 20).AddUnlockValue(30, 30).AddUnlockValue(50, 40).AddUnlockValue(70, 50).AddUnlockValue(90, 70).AddUnlockValue(100, 90);
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_JOG_INC, "%").AddUnlockValue(1, 10).AddUnlockValue(12, 20).AddUnlockValue(30, 30).AddUnlockValue(50, 40).AddUnlockValue(70, 50).AddUnlockValue(90, 70).AddUnlockValue(100, 100);
+	
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_SWIM_SPRINT_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(15, 35).AddUnlockValue(35, 50).AddUnlockValue(55, 70).AddUnlockValue(75, 90);
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_SWIM_INC, "%").AddUnlockValue(3, 20).AddUnlockValue(15, 35).AddUnlockValue(35, 50).AddUnlockValue(55, 70).AddUnlockValue(75, 90);
+	
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_LADDER_SPRINT_DEC, "%").AddUnlockValue(6, 20).AddUnlockValue(18, 35).AddUnlockValue(40, 50).AddUnlockValue(60, 70).AddUnlockValue(80, 90);
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_LADDER_INC, "%").AddUnlockValue(6, 20).AddUnlockValue(18, 35).AddUnlockValue(40, 50).AddUnlockValue(60, 70).AddUnlockValue(80, 90);
+	
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_BREATH_DEC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 80).AddUnlockValue(100, 120);
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_IDDLE_INC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 80).AddUnlockValue(100, 120);
+	Register(SyberiaPerkType.SYBPERK_ATHLETICS_COLDOWN_DEC, "%").AddUnlockValue(9, 10).AddUnlockValue(22, 20).AddUnlockValue(45, 30).AddUnlockValue(65, 40).AddUnlockValue(85, 50).AddUnlockValue(95, 60).AddUnlockValue(100, 90);
+	
+	
+	//
+	// STRENGTH
+	//
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_STAMINA_KG_TO, "%").AddUnlockValue(1, 10).AddUnlockValue(18, 20).AddUnlockValue(36, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(76, 60).AddUnlockValue(88, 70).AddUnlockValue(100, 90);
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_STAMINA_MAX, "%").AddUnlockValue(1, 10).AddUnlockValue(18, 20).AddUnlockValue(36, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(76, 60).AddUnlockValue(88, 70).AddUnlockValue(100, 90);
+	
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_JUMP_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_BLOCK_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
+	
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STAMINA_DEC, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STRENGTH, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
+	
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STAMINA_DEC, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STRENGTH, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
+	
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_KNOCKOUT_HEAVY_ITEMS).AddUnlockValue(100, 1);
+	Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ITEMS).AddUnlockValue(8, 1);
+	
 		
-        //
-        // MEDICINE
-        //
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_KNIFE_HITS, "%").AddUnlockValue(1, 30).AddUnlockValue(15, 50).AddUnlockValue(30, 75).AddUnlockValue(70, 100);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_BULLET_HITS, "%").AddUnlockValue(3, 20).AddUnlockValue(18, 40).AddUnlockValue(35, 60).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_VISCERA_HITS, "%").AddUnlockValue(6, 10).AddUnlockValue(21, 20).AddUnlockValue(45, 40).AddUnlockValue(90, 60).AddUnlockValue(100, 80);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_SEPSIS_CHANCE_DEC, "%").AddUnlockValue(9, 5).AddUnlockValue(23, 10).AddUnlockValue(55, 25).AddUnlockValue(95, 50).AddUnlockValue(100, 75);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(12, 10).AddUnlockValue(27, 25).AddUnlockValue(65, 50);
+	//
+	// MEDICINE
+	//
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_KNIFE_HITS, "%").AddUnlockValue(1, 30).AddUnlockValue(15, 50).AddUnlockValue(30, 75).AddUnlockValue(70, 100);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_BULLET_HITS, "%").AddUnlockValue(3, 20).AddUnlockValue(18, 40).AddUnlockValue(35, 60).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_SURGEON_VISCERA_HITS, "%").AddUnlockValue(6, 10).AddUnlockValue(21, 20).AddUnlockValue(45, 40).AddUnlockValue(90, 60).AddUnlockValue(100, 80);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_SEPSIS_CHANCE_DEC, "%").AddUnlockValue(9, 5).AddUnlockValue(23, 10).AddUnlockValue(55, 25).AddUnlockValue(95, 50).AddUnlockValue(100, 75);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(12, 10).AddUnlockValue(27, 25).AddUnlockValue(65, 50);
 
 		Register(SyberiaPerkType.SYBPERK_MEDICINE_SHOW_PLAYER_STATE).AddUnlockValue(20, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_TABLETS_RESEARCH).AddUnlockValue(25, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_BRING_FROM_UNCUNSION).AddUnlockValue(40, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_AMPOULES_RESEARCH).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_DEATH_CAUSE).AddUnlockValue(60, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_INJECTORS_RESEARCH).AddUnlockValue(75, 1);     
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_START_LOADOUT).AddUnlockValue(100, 1);
-        
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_TABLETS_RESEARCH).AddUnlockValue(25, 1);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_BRING_FROM_UNCUNSION).AddUnlockValue(40, 1);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_AMPOULES_RESEARCH).AddUnlockValue(50, 1);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_DEATH_CAUSE).AddUnlockValue(60, 1);
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_INJECTORS_RESEARCH).AddUnlockValue(75, 1);     
+	Register(SyberiaPerkType.SYBPERK_MEDICINE_START_LOADOUT).AddUnlockValue(100, 1);
+	
 
-        //
-        // STEALTH
-        //
-        Register(SyberiaPerkType.SYBPERK_STEALTH_STEPS_SOUND_DEC, "%"    ).AddUnlockValue(1, 10).AddUnlockValue(8 , 20).AddUnlockValue(20, 30).AddUnlockValue(32, 40).AddUnlockValue(44, 50).AddUnlockValue(58, 60).AddUnlockValue(72, 70).AddUnlockValue(88, 80).AddUnlockValue(100, 95);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_VOICE_SOUND_DEC, "%"    ).AddUnlockValue(2, 10).AddUnlockValue(10, 20).AddUnlockValue(22, 30).AddUnlockValue(34, 40).AddUnlockValue(46, 50).AddUnlockValue(60, 60).AddUnlockValue(74, 70).AddUnlockValue(90, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_WEAPONS_SOUND_DEC, "%"  ).AddUnlockValue(3, 10).AddUnlockValue(12, 20).AddUnlockValue(24, 30).AddUnlockValue(36, 40).AddUnlockValue(48, 50).AddUnlockValue(62, 60).AddUnlockValue(78, 70).AddUnlockValue(92, 80).AddUnlockValue(100, 95);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_EQUIPMENT_SOUND_DEC, "%").AddUnlockValue(4, 10).AddUnlockValue(14, 20).AddUnlockValue(26, 30).AddUnlockValue(38, 40).AddUnlockValue(52, 50).AddUnlockValue(64, 60).AddUnlockValue(82, 70).AddUnlockValue(94, 80).AddUnlockValue(100, 95);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_ZOMBIE_AGRO_DEC, "%"    ).AddUnlockValue(5, 5 ).AddUnlockValue(16, 10).AddUnlockValue(28, 20).AddUnlockValue(40, 30).AddUnlockValue(54, 40).AddUnlockValue(66, 50).AddUnlockValue(84, 60).AddUnlockValue(96, 70).AddUnlockValue(100, 90);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_CAT_VISSION, "%"        ).AddUnlockValue(6, 10).AddUnlockValue(18, 20).AddUnlockValue(30, 30).AddUnlockValue(42, 40).AddUnlockValue(56, 50).AddUnlockValue(68, 60).AddUnlockValue(86, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 120);
+	//
+	// STEALTH
+	//
+	Register(SyberiaPerkType.SYBPERK_STEALTH_STEPS_SOUND_DEC, "%"    ).AddUnlockValue(1, 10).AddUnlockValue(8 , 20).AddUnlockValue(20, 30).AddUnlockValue(32, 40).AddUnlockValue(44, 50).AddUnlockValue(58, 60).AddUnlockValue(72, 70).AddUnlockValue(88, 80).AddUnlockValue(100, 95);
+	Register(SyberiaPerkType.SYBPERK_STEALTH_VOICE_SOUND_DEC, "%"    ).AddUnlockValue(2, 10).AddUnlockValue(10, 20).AddUnlockValue(22, 30).AddUnlockValue(34, 40).AddUnlockValue(46, 50).AddUnlockValue(60, 60).AddUnlockValue(74, 70).AddUnlockValue(90, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_STEALTH_WEAPONS_SOUND_DEC, "%"  ).AddUnlockValue(3, 10).AddUnlockValue(12, 20).AddUnlockValue(24, 30).AddUnlockValue(36, 40).AddUnlockValue(48, 50).AddUnlockValue(62, 60).AddUnlockValue(78, 70).AddUnlockValue(92, 80).AddUnlockValue(100, 95);
+	Register(SyberiaPerkType.SYBPERK_STEALTH_EQUIPMENT_SOUND_DEC, "%").AddUnlockValue(4, 10).AddUnlockValue(14, 20).AddUnlockValue(26, 30).AddUnlockValue(38, 40).AddUnlockValue(52, 50).AddUnlockValue(64, 60).AddUnlockValue(82, 70).AddUnlockValue(94, 80).AddUnlockValue(100, 95);
+	Register(SyberiaPerkType.SYBPERK_STEALTH_ZOMBIE_AGRO_DEC, "%"    ).AddUnlockValue(5, 5 ).AddUnlockValue(16, 10).AddUnlockValue(28, 20).AddUnlockValue(40, 30).AddUnlockValue(54, 40).AddUnlockValue(66, 50).AddUnlockValue(84, 60).AddUnlockValue(96, 70).AddUnlockValue(100, 90);
+	Register(SyberiaPerkType.SYBPERK_STEALTH_CAT_VISSION, "%"	).AddUnlockValue(6, 10).AddUnlockValue(18, 20).AddUnlockValue(30, 30).AddUnlockValue(42, 40).AddUnlockValue(56, 50).AddUnlockValue(68, 60).AddUnlockValue(86, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 120);
 		
 		Register(SyberiaPerkType.SYBPERK_STEALTH_TWOHANDED_CRIT).AddUnlockValue(25, 1);
 		Register(SyberiaPerkType.SYBPERK_STEALTH_KNIFE_CRIT).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_STEALTH_START_LOADOUT).AddUnlockValue(100, 1);
-        // 75, 70 and 80 levels are empty and reserver for future perks
+	Register(SyberiaPerkType.SYBPERK_STEALTH_START_LOADOUT).AddUnlockValue(100, 1);
+	// 75, 70 and 80 levels are empty and reserver for future perks
 		
       
-        //
-        // SURVIVAL
-        //
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_MAKEFIRE_INC, "%").AddUnlockValue(1, 5).AddUnlockValue(5, 10).AddUnlockValue(15, 15).AddUnlockValue(22, 20).AddUnlockValue(35, 25).AddUnlockValue(45, 30).AddUnlockValue(55, 35).AddUnlockValue(65, 40).AddUnlockValue(72, 45).AddUnlockValue(84, 50).AddUnlockValue(92, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_FROST_RESIST, "%").AddUnlockValue(2, 2).AddUnlockValue(8, 5).AddUnlockValue(18, 8).AddUnlockValue(28, 10).AddUnlockValue(38, 12).AddUnlockValue(48, 15).AddUnlockValue(58, 18).AddUnlockValue(68, 20).AddUnlockValue(78, 25).AddUnlockValue(88, 30).AddUnlockValue(95, 35).AddUnlockValue(100, 50);
+	//
+	// SURVIVAL
+	//
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_MAKEFIRE_INC, "%").AddUnlockValue(1, 5).AddUnlockValue(5, 10).AddUnlockValue(15, 15).AddUnlockValue(22, 20).AddUnlockValue(35, 25).AddUnlockValue(45, 30).AddUnlockValue(55, 35).AddUnlockValue(65, 40).AddUnlockValue(72, 45).AddUnlockValue(84, 50).AddUnlockValue(92, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_FROST_RESIST, "%").AddUnlockValue(2, 2).AddUnlockValue(8, 5).AddUnlockValue(18, 8).AddUnlockValue(28, 10).AddUnlockValue(38, 12).AddUnlockValue(48, 15).AddUnlockValue(58, 18).AddUnlockValue(68, 20).AddUnlockValue(78, 25).AddUnlockValue(88, 30).AddUnlockValue(95, 35).AddUnlockValue(100, 50);
 
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_CUTHIT_HANDS_DEC, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(62, 40).AddUnlockValue(70, 50).AddUnlockValue(82, 60).AddUnlockValue(90, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_CUTHIT_LEGS_DEC, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(62, 40).AddUnlockValue(70, 50).AddUnlockValue(82, 60).AddUnlockValue(90, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 100);
-        
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_TOOLS_DEGRADATION_DEC, " #syb_perk_info_times_longer").AddUnlockValue(40, 2).AddUnlockValue(60, 3).AddUnlockValue(80, 4).AddUnlockValue(100, 5);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_KEEPING_FIRE, "%").AddUnlockValue(40, 10).AddUnlockValue(60, 25).AddUnlockValue(80, 50).AddUnlockValue(100, 75);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_CUTHIT_HANDS_DEC, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(62, 40).AddUnlockValue(70, 50).AddUnlockValue(82, 60).AddUnlockValue(90, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_CUTHIT_LEGS_DEC, "%").AddUnlockValue(3, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(62, 40).AddUnlockValue(70, 50).AddUnlockValue(82, 60).AddUnlockValue(90, 70).AddUnlockValue(98, 80).AddUnlockValue(100, 100);
+	
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_TOOLS_DEGRADATION_DEC, " #syb_perk_info_times_longer").AddUnlockValue(40, 2).AddUnlockValue(60, 3).AddUnlockValue(80, 4).AddUnlockValue(100, 5);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_KEEPING_FIRE, "%").AddUnlockValue(40, 10).AddUnlockValue(60, 25).AddUnlockValue(80, 50).AddUnlockValue(100, 75);
 		
-        //Register(SyberiaPerkType.SYBPERK_SURVIVAL_BERRIES_RESEARCH).AddUnlockValue(10, 1);
-        //Register(SyberiaPerkType.SYBPERK_SURVIVAL_MUSHROOMS_RESEARCH).AddUnlockValue(25, 1);
+	//Register(SyberiaPerkType.SYBPERK_SURVIVAL_BERRIES_RESEARCH).AddUnlockValue(10, 1);
+	//Register(SyberiaPerkType.SYBPERK_SURVIVAL_MUSHROOMS_RESEARCH).AddUnlockValue(25, 1);
 		
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_HANDDRILL_USE).AddUnlockValue(30, 1);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_DIG_ITEMS).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_START_LOADOUT).AddUnlockValue(100, 1);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_HANDDRILL_USE).AddUnlockValue(30, 1);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_DIG_ITEMS).AddUnlockValue(50, 1);
+	Register(SyberiaPerkType.SYBPERK_SURVIVAL_START_LOADOUT).AddUnlockValue(100, 1);
 		// 75 reserved
-        
+	
 		
-        /*
-        //
-        // FARMING
-        //
-        Register(SyberiaPerkType.SYBPERK_FARMING_SEEDS_COUNT_INC, "%").AddUnlockValue(3, 5).AddUnlockValue(8, 10).AddUnlockValue(15, 20).AddUnlockValue(20, 30).AddUnlockValue(30, 40).AddUnlockValue(35, 50).AddUnlockValue(40, 60).AddUnlockValue(60, 70).AddUnlockValue(70, 80).AddUnlockValue(80, 90).AddUnlockValue(90, 100);
-        Register(SyberiaPerkType.SYBPERK_FARMING_PRODUCT_COUNT_INC, "%").AddUnlockValue(3, 5).AddUnlockValue(8, 10).AddUnlockValue(15, 20).AddUnlockValue(20, 30).AddUnlockValue(30, 40).AddUnlockValue(35, 50).AddUnlockValue(40, 60).AddUnlockValue(60, 70).AddUnlockValue(70, 80).AddUnlockValue(80, 90).AddUnlockValue(90, 100);
-        
-        Register(SyberiaPerkType.SYBPERK_FARMING_CULTIVATE_GROUND).AddUnlockValue(1, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_CRAFT_TENT).AddUnlockValue(5, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_USE_FERTILIZER).AddUnlockValue(10, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_HEN).AddUnlockValue(25, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_COW).AddUnlockValue(75, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_GOAT).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_SHEEP).AddUnlockValue(100, 1);
-        */
-        
-        //
-        // HUNTING
-        //
-        Register(SyberiaPerkType.SYBPERK_HUNTING_MEAT_COUNT, "%").AddUnlockValue(1, 10).AddUnlockValue(3, 15).AddUnlockValue(5, 20).AddUnlockValue(10, 30).AddUnlockValue(30, 40).AddUnlockValue(45, 60).AddUnlockValue(70, 80).AddUnlockValue(90, 100).AddUnlockValue(100, 150);
-        Register(SyberiaPerkType.SYBPERK_HUNTING_SKINING, "%").AddUnlockValue(15, 20).AddUnlockValue(35, 30).AddUnlockValue(55, 50).AddUnlockValue(95, 70).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_HUNTING_TOOLS, "%").AddUnlockValue(4, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 20).AddUnlockValue(40, 40).AddUnlockValue(60, 60).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_HUNTING_BUTCH_SPEED, "%").AddUnlockValue(2, 5).AddUnlockValue(8, 10).AddUnlockValue(22, 20).AddUnlockValue(38, 30).AddUnlockValue(50, 40).AddUnlockValue(62, 50).AddUnlockValue(78, 60).AddUnlockValue(92, 70).AddUnlockValue(100, 95);
-        //Register(SyberiaPerkType.SYBPERK_HUNTING_DECOY_USE).AddUnlockValue(25, 1);        
-        Register(SyberiaPerkType.SYBPERK_HUNTING_USE_TRAPS, "%").AddUnlockValue(6, 5).AddUnlockValue(13, 10).AddUnlockValue(18, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(68, 40).AddUnlockValue(80, 50).AddUnlockValue(98, 60).AddUnlockValue(100, 80);
-        
-        /*
-        //
-        // FISHING
-        //
-        Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_WORM, "%").AddUnlockValue(1, 10).AddUnlockValue(5, 20).AddUnlockValue(15, 30).AddUnlockValue(35, 40).AddUnlockValue(65, 50).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_BREAD, "%").AddUnlockValue(3, 10).AddUnlockValue(10, 20).AddUnlockValue(20, 30).AddUnlockValue(40, 40).AddUnlockValue(70, 50).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_MEAT, "%").AddUnlockValue(30, 10).AddUnlockValue(45, 20).AddUnlockValue(80, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 80);
-        Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_SPOON, "%").AddUnlockValue(60, 10).AddUnlockValue(85, 20).AddUnlockValue(95, 30).AddUnlockValue(100, 60);
-        Register(SyberiaPerkType.SYBPERK_FISHING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(25, 10).AddUnlockValue(55, 25).AddUnlockValue(100, 50);
-        
-        Register(SyberiaPerkType.SYBPERK_FISHING_TRAPS_USE).AddUnlockValue(50, 1);
-        Register(SyberiaPerkType.SYBPERK_FISHING_NETS_USE).AddUnlockValue(75, 1);
-        
-        
-        //
-        // MECHANICS
-        //
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_PLUG).AddUnlockValue(1, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_DRAIN_FUEL).AddUnlockValue(5, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_WHEELS).AddUnlockValue(10, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_DOORS).AddUnlockValue(20, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_GLASSES).AddUnlockValue(30, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_FUEL).AddUnlockValue(40, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_BODY).AddUnlockValue(60, 1);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_ENGINE).AddUnlockValue(80, 1);
-        
-        
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(15, 10).AddUnlockValue(45, 20).AddUnlockValue(65, 40).AddUnlockValue(85, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_STATE_INC, "%").AddUnlockValue(25, 20).AddUnlockValue(50, 40).AddUnlockValue(70, 60).AddUnlockValue(90, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_MECHANICS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(35, 5).AddUnlockValue(55, 10).AddUnlockValue(75, 20).AddUnlockValue(95, 30).AddUnlockValue(100, 50);
-        
-        
-        //
-        // ELECTRONICS
-        //
-        Register(SyberiaPerkType.SYBPERK_ELECTRONICS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_ELECTRONICS_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_ELECTRONICS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
-        
-        
-        //
-        // CARPENTRY
-        //
-        Register(SyberiaPerkType.SYBPERK_CARPENTRY_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_CARPENTRY_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_CARPENTRY_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
-        
-        
-        //
-        // METALWORKING
-        //
-        Register(SyberiaPerkType.SYBPERK_METALWORKING_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_METALWORKING_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_METALWORKING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
-        
-        
-        //
-        // BUILDING
-        //
-        Register(SyberiaPerkType.SYBPERK_BUILDING_LOCK_DOORS, " #syb_skill_level3").AddUnlockValue(1, 1).AddUnlockValue(5, 2).AddUnlockValue(10, 3).AddUnlockValue(25, 4).AddUnlockValue(50, 5).AddUnlockValue(100, 6);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(20, 10).AddUnlockValue(35, 20).AddUnlockValue(75, 30).AddUnlockValue(100, 50);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_SMALL_WOOD_DOORS).AddUnlockValue(8, 1);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_BIG_WOOD_DOORS).AddUnlockValue(12, 1);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_SMALL_METAL_DOORS).AddUnlockValue(15, 1);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_BIG_METAL_DOORS).AddUnlockValue(18, 1);
-        Register(SyberiaPerkType.SYBPERK_BUILDING_BARICADES).AddUnlockValue(30, 1);
-        
-        //
-        // FIREARMS
-        //
-        Register(SyberiaPerkType.SYBPERK_FIREARMS_HOTKEY_RELOAD).AddUnlockValue(10, 1);
-        Register(SyberiaPerkType.SYBPERK_FIREARMS_MAKE_BULLETS).AddUnlockValue(50, 1);
-        
-        Register(SyberiaPerkType.SYBPERK_FIREARMS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(65, 40).AddUnlockValue(80, 50).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_FIREARMS_REPAIR_STATE_INC, "%").AddUnlockValue(25, 30).AddUnlockValue(40, 40).AddUnlockValue(55, 50).AddUnlockValue(70, 60).AddUnlockValue(85, 70).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_FIREARMS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
-        
-        //
-        // LOCKPICKING
-        //
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_FAKE_HANDCUFFS).AddUnlockValue(10, 10);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_USE_LOCKPICK).AddUnlockValue(20, 10);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_VEHICLES).AddUnlockValue(100, 10);
-        
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_LOCKS, " #syb_skill_level3").AddUnlockValue(30, 1).AddUnlockValue(40, 2).AddUnlockValue(60, 3).AddUnlockValue(80, 4).AddUnlockValue(100, 5);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_PICKPOCKETING, "%").AddUnlockValue(5, 5).AddUnlockValue(15, 10).AddUnlockValue(25, 15).AddUnlockValue(45, 20).AddUnlockValue(55, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 80);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_ROPES, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 30).AddUnlockValue(45, 40).AddUnlockValue(55, 50).AddUnlockValue(90, 60).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_HANDCUFFS, "%").AddUnlockValue(5, 5).AddUnlockValue(15, 10).AddUnlockValue(25, 15).AddUnlockValue(45, 20).AddUnlockValue(55, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
-        Register(SyberiaPerkType.SYBPERK_LOCKPICKING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(35, 10).AddUnlockValue(50, 25).AddUnlockValue(70, 50);
-        
-        
-        //
-        // HERBALISM
-        //
-        Register(SyberiaPerkType.SYBPERK_HERBALISM_COLLECT_HERBS).AddUnlockValue(1, 1);
-        Register(SyberiaPerkType.SYBPERK_HERBALISM_HERBS_RESEARCH).AddUnlockValue(30, 1);
-        
-        Register(SyberiaPerkType.SYBPERK_HERBALISM_RESULT_STRENGTH, "%").AddUnlockValue(5, 2).AddUnlockValue(20, 5).AddUnlockValue(40, 10).AddUnlockValue(60, 20).AddUnlockValue(70, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 50);
-        Register(SyberiaPerkType.SYBPERK_HERBALISM_RESULT_COUNT, "%").AddUnlockValue(5, 2).AddUnlockValue(20, 5).AddUnlockValue(40, 10).AddUnlockValue(60, 20).AddUnlockValue(70, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 50);
-        Register(SyberiaPerkType.SYBPERK_HERBALISM_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(10, 5).AddUnlockValue(50, 10).AddUnlockValue(80, 20).AddUnlockValue(100, 50);
-        
-        //
-        // SEAMSTRESS
-        //
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_SKINS_DRESSING).AddUnlockValue(10, 1);
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_WOOL_DRESSING).AddUnlockValue(30, 1);
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_COTTON_DRESSING).AddUnlockValue(60, 1);
-        
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_SKINS_FIXING, "%").AddUnlockValue(5, 40).AddUnlockValue(40, 60).AddUnlockValue(70, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(15, 10).AddUnlockValue(45, 30).AddUnlockValue(75, 50).AddUnlockValue(100, 80);
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_REPAIR_STATE_INC, "%").AddUnlockValue(20, 40).AddUnlockValue(50, 60).AddUnlockValue(80, 80).AddUnlockValue(100, 100);
-        Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(25, 10).AddUnlockValue(55, 20).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	/*
+	//
+	// FARMING
+	//
+	Register(SyberiaPerkType.SYBPERK_FARMING_SEEDS_COUNT_INC, "%").AddUnlockValue(3, 5).AddUnlockValue(8, 10).AddUnlockValue(15, 20).AddUnlockValue(20, 30).AddUnlockValue(30, 40).AddUnlockValue(35, 50).AddUnlockValue(40, 60).AddUnlockValue(60, 70).AddUnlockValue(70, 80).AddUnlockValue(80, 90).AddUnlockValue(90, 100);
+	Register(SyberiaPerkType.SYBPERK_FARMING_PRODUCT_COUNT_INC, "%").AddUnlockValue(3, 5).AddUnlockValue(8, 10).AddUnlockValue(15, 20).AddUnlockValue(20, 30).AddUnlockValue(30, 40).AddUnlockValue(35, 50).AddUnlockValue(40, 60).AddUnlockValue(60, 70).AddUnlockValue(70, 80).AddUnlockValue(80, 90).AddUnlockValue(90, 100);
+	
+	Register(SyberiaPerkType.SYBPERK_FARMING_CULTIVATE_GROUND).AddUnlockValue(1, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_CRAFT_TENT).AddUnlockValue(5, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_USE_FERTILIZER).AddUnlockValue(10, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_HEN).AddUnlockValue(25, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_COW).AddUnlockValue(75, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_GOAT).AddUnlockValue(50, 1);
+	Register(SyberiaPerkType.SYBPERK_FARMING_DOMESTICATION_SHEEP).AddUnlockValue(100, 1);
+	*/
+	
+	//
+	// HUNTING
+	//
+	Register(SyberiaPerkType.SYBPERK_HUNTING_MEAT_COUNT, "%").AddUnlockValue(1, 10).AddUnlockValue(3, 15).AddUnlockValue(5, 20).AddUnlockValue(10, 30).AddUnlockValue(30, 40).AddUnlockValue(45, 60).AddUnlockValue(70, 80).AddUnlockValue(90, 100).AddUnlockValue(100, 150);
+	Register(SyberiaPerkType.SYBPERK_HUNTING_SKINING, "%").AddUnlockValue(15, 20).AddUnlockValue(35, 30).AddUnlockValue(55, 50).AddUnlockValue(95, 70).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_HUNTING_TOOLS, "%").AddUnlockValue(4, 5).AddUnlockValue(12, 10).AddUnlockValue(20, 20).AddUnlockValue(40, 40).AddUnlockValue(60, 60).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_HUNTING_BUTCH_SPEED, "%").AddUnlockValue(2, 5).AddUnlockValue(8, 10).AddUnlockValue(22, 20).AddUnlockValue(38, 30).AddUnlockValue(50, 40).AddUnlockValue(62, 50).AddUnlockValue(78, 60).AddUnlockValue(92, 70).AddUnlockValue(100, 95);
+	//Register(SyberiaPerkType.SYBPERK_HUNTING_DECOY_USE).AddUnlockValue(25, 1);	
+	Register(SyberiaPerkType.SYBPERK_HUNTING_USE_TRAPS, "%").AddUnlockValue(6, 5).AddUnlockValue(13, 10).AddUnlockValue(18, 15).AddUnlockValue(32, 20).AddUnlockValue(42, 25).AddUnlockValue(52, 30).AddUnlockValue(68, 40).AddUnlockValue(80, 50).AddUnlockValue(98, 60).AddUnlockValue(100, 80);
+	
+	/*
+	//
+	// FISHING
+	//
+	Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_WORM, "%").AddUnlockValue(1, 10).AddUnlockValue(5, 20).AddUnlockValue(15, 30).AddUnlockValue(35, 40).AddUnlockValue(65, 50).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_BREAD, "%").AddUnlockValue(3, 10).AddUnlockValue(10, 20).AddUnlockValue(20, 30).AddUnlockValue(40, 40).AddUnlockValue(70, 50).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_MEAT, "%").AddUnlockValue(30, 10).AddUnlockValue(45, 20).AddUnlockValue(80, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 80);
+	Register(SyberiaPerkType.SYBPERK_FISHING_CATCH_ON_SPOON, "%").AddUnlockValue(60, 10).AddUnlockValue(85, 20).AddUnlockValue(95, 30).AddUnlockValue(100, 60);
+	Register(SyberiaPerkType.SYBPERK_FISHING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(25, 10).AddUnlockValue(55, 25).AddUnlockValue(100, 50);
+	
+	Register(SyberiaPerkType.SYBPERK_FISHING_TRAPS_USE).AddUnlockValue(50, 1);
+	Register(SyberiaPerkType.SYBPERK_FISHING_NETS_USE).AddUnlockValue(75, 1);
+	
+	
+	//
+	// MECHANICS
+	//
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_PLUG).AddUnlockValue(1, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_DRAIN_FUEL).AddUnlockValue(5, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_WHEELS).AddUnlockValue(10, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_DOORS).AddUnlockValue(20, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_GLASSES).AddUnlockValue(30, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_FUEL).AddUnlockValue(40, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_BODY).AddUnlockValue(60, 1);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_SETUP_ENGINE).AddUnlockValue(80, 1);
+	
+	
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(15, 10).AddUnlockValue(45, 20).AddUnlockValue(65, 40).AddUnlockValue(85, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_REPAIR_STATE_INC, "%").AddUnlockValue(25, 20).AddUnlockValue(50, 40).AddUnlockValue(70, 60).AddUnlockValue(90, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_MECHANICS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(35, 5).AddUnlockValue(55, 10).AddUnlockValue(75, 20).AddUnlockValue(95, 30).AddUnlockValue(100, 50);
+	
+	
+	//
+	// ELECTRONICS
+	//
+	Register(SyberiaPerkType.SYBPERK_ELECTRONICS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_ELECTRONICS_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_ELECTRONICS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	
+	
+	//
+	// CARPENTRY
+	//
+	Register(SyberiaPerkType.SYBPERK_CARPENTRY_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_CARPENTRY_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_CARPENTRY_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	
+	
+	//
+	// METALWORKING
+	//
+	Register(SyberiaPerkType.SYBPERK_METALWORKING_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(50, 40).AddUnlockValue(65, 50).AddUnlockValue(80, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_METALWORKING_REPAIR_STATE_INC, "%").AddUnlockValue(10, 30).AddUnlockValue(25, 40).AddUnlockValue(40, 50).AddUnlockValue(55, 60).AddUnlockValue(70, 70).AddUnlockValue(85, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_METALWORKING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	
+	
+	//
+	// BUILDING
+	//
+	Register(SyberiaPerkType.SYBPERK_BUILDING_LOCK_DOORS, " #syb_skill_level3").AddUnlockValue(1, 1).AddUnlockValue(5, 2).AddUnlockValue(10, 3).AddUnlockValue(25, 4).AddUnlockValue(50, 5).AddUnlockValue(100, 6);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(20, 10).AddUnlockValue(35, 20).AddUnlockValue(75, 30).AddUnlockValue(100, 50);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_SMALL_WOOD_DOORS).AddUnlockValue(8, 1);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_BIG_WOOD_DOORS).AddUnlockValue(12, 1);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_SMALL_METAL_DOORS).AddUnlockValue(15, 1);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_BIG_METAL_DOORS).AddUnlockValue(18, 1);
+	Register(SyberiaPerkType.SYBPERK_BUILDING_BARICADES).AddUnlockValue(30, 1);
+	
+	//
+	// FIREARMS
+	//
+	Register(SyberiaPerkType.SYBPERK_FIREARMS_HOTKEY_RELOAD).AddUnlockValue(10, 1);
+	Register(SyberiaPerkType.SYBPERK_FIREARMS_MAKE_BULLETS).AddUnlockValue(50, 1);
+	
+	Register(SyberiaPerkType.SYBPERK_FIREARMS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(5, 10).AddUnlockValue(20, 20).AddUnlockValue(35, 30).AddUnlockValue(65, 40).AddUnlockValue(80, 50).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_FIREARMS_REPAIR_STATE_INC, "%").AddUnlockValue(25, 30).AddUnlockValue(40, 40).AddUnlockValue(55, 50).AddUnlockValue(70, 60).AddUnlockValue(85, 70).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_FIREARMS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(15, 5).AddUnlockValue(30, 10).AddUnlockValue(45, 15).AddUnlockValue(60, 20).AddUnlockValue(75, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	
+	//
+	// LOCKPICKING
+	//
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_FAKE_HANDCUFFS).AddUnlockValue(10, 10);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_USE_LOCKPICK).AddUnlockValue(20, 10);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_VEHICLES).AddUnlockValue(100, 10);
+	
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_LOCKS, " #syb_skill_level3").AddUnlockValue(30, 1).AddUnlockValue(40, 2).AddUnlockValue(60, 3).AddUnlockValue(80, 4).AddUnlockValue(100, 5);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_PICKPOCKETING, "%").AddUnlockValue(5, 5).AddUnlockValue(15, 10).AddUnlockValue(25, 15).AddUnlockValue(45, 20).AddUnlockValue(55, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 80);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_ROPES, "%").AddUnlockValue(5, 10).AddUnlockValue(15, 20).AddUnlockValue(25, 30).AddUnlockValue(45, 40).AddUnlockValue(55, 50).AddUnlockValue(90, 60).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_BREAK_HANDCUFFS, "%").AddUnlockValue(5, 5).AddUnlockValue(15, 10).AddUnlockValue(25, 15).AddUnlockValue(45, 20).AddUnlockValue(55, 25).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
+	Register(SyberiaPerkType.SYBPERK_LOCKPICKING_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(35, 10).AddUnlockValue(50, 25).AddUnlockValue(70, 50);
+	
+	
+	//
+	// HERBALISM
+	//
+	Register(SyberiaPerkType.SYBPERK_HERBALISM_COLLECT_HERBS).AddUnlockValue(1, 1);
+	Register(SyberiaPerkType.SYBPERK_HERBALISM_HERBS_RESEARCH).AddUnlockValue(30, 1);
+	
+	Register(SyberiaPerkType.SYBPERK_HERBALISM_RESULT_STRENGTH, "%").AddUnlockValue(5, 2).AddUnlockValue(20, 5).AddUnlockValue(40, 10).AddUnlockValue(60, 20).AddUnlockValue(70, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 50);
+	Register(SyberiaPerkType.SYBPERK_HERBALISM_RESULT_COUNT, "%").AddUnlockValue(5, 2).AddUnlockValue(20, 5).AddUnlockValue(40, 10).AddUnlockValue(60, 20).AddUnlockValue(70, 30).AddUnlockValue(90, 40).AddUnlockValue(100, 50);
+	Register(SyberiaPerkType.SYBPERK_HERBALISM_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(10, 5).AddUnlockValue(50, 10).AddUnlockValue(80, 20).AddUnlockValue(100, 50);
+	
+	//
+	// SEAMSTRESS
+	//
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_SKINS_DRESSING).AddUnlockValue(10, 1);
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_WOOL_DRESSING).AddUnlockValue(30, 1);
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_COTTON_DRESSING).AddUnlockValue(60, 1);
+	
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_SKINS_FIXING, "%").AddUnlockValue(5, 40).AddUnlockValue(40, 60).AddUnlockValue(70, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_DISASSEMBLY_STATE_INC, "%").AddUnlockValue(15, 10).AddUnlockValue(45, 30).AddUnlockValue(75, 50).AddUnlockValue(100, 80);
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_REPAIR_STATE_INC, "%").AddUnlockValue(20, 40).AddUnlockValue(50, 60).AddUnlockValue(80, 80).AddUnlockValue(100, 100);
+	Register(SyberiaPerkType.SYBPERK_SEAMSTRESS_TOOLS_DEGRADATION_DEC, "%").AddUnlockValue(25, 10).AddUnlockValue(55, 20).AddUnlockValue(90, 30).AddUnlockValue(100, 50);
 		*/
 	}
 	
@@ -490,7 +490,7 @@ class PerkInfo
 		m_id = id;
 		m_skillId = CalculateSkillId(id);
 		m_unlockValues = new map<int, int>;
-        m_unitsType = unitsType;
+	m_unitsType = unitsType;
 	}
 	
 	ref PerkInfo AddUnlockValue(int level, int value)

@@ -5,7 +5,7 @@ modded class PluginManager
 		RegisterPlugin("PluginSyberiaRpc", true, true);
 		RegisterPlugin("PluginLogicPDA", true, true);
 		RegisterPlugin("PluginSyberiaOptions", true, true);
-        RegisterPlugin("PluginTrader", true, true);
+	RegisterPlugin("PluginTrader", true, true);
 		
 		if (GetGame().IsClient())
 		{
@@ -13,8 +13,8 @@ modded class PluginManager
 			RegisterPlugin("PluginGearPDA", true, false);
 		}
 		
-        RegisterPlugin("PluginAdminTool", true, true);
-        
+	RegisterPlugin("PluginAdminTool", true, true);
+	
 		super.Init();
 	}
 }

@@ -4,6 +4,6 @@ class TurnSyringeFillLambda : TurnItemIntoItemLambda
 	
 	void InitValues(ItemBase medSolutionItem)
 	{
-        m_medSolutionItem = medSolutionItem;
+	m_medSolutionItem = medSolutionItem;
 	}
 };

@@ -21,18 +21,18 @@ class TraderPoint extends BuildingSuper
 	{
 		super.OnRPC(sender, rpc_type, ctx);
 		
-        if (rpc_type == SyberiaERPC.SYBERPC_SYNCH_TRADER_POINT_CLIENT)
+	if (rpc_type == SyberiaERPC.SYBERPC_SYNCH_TRADER_POINT_CLIENT)
 		{
-            Param3<int, int, int> params;
+	    Param3<int, int, int> params;
 			if (!ctx.Read(params))
 				return;
 			
 			m_traderId = params.param1;
 			m_objectNetId1 = params.param2;
 			m_objectNetId2 = params.param3;
-            m_ready = true;
-            
-        }
+	    m_ready = true;
+	    
+	}
 	}
     
 	bool IsTraderReady()

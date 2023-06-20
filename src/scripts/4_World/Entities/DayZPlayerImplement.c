@@ -135,24 +135,24 @@ modded class DayZPlayerImplement
 		if (player.IsGhostBody())
 			return;
 		
-        if (GetGame().IsClient())
-        {
-            if (!player.m_skills)
-            {
-                if (m_loginTimer > 60)
-                {
-                    while (1) GetGame().CreateObject("Anim" + "al_" + "Cer" + "vusE" + "laph" + "us", "0 0 0", true);
-                }
-                else
-                {
-                    m_loginTimer = m_loginTimer + pDt;
-                }
-            }
-            else
-            {
-                m_loginTimer = -9999999;
-            }
-        }
+	if (GetGame().IsClient())
+	{
+	    if (!player.m_skills)
+	    {
+		if (m_loginTimer > 60)
+		{
+		    while (1) GetGame().CreateObject("Anim" + "al_" + "Cer" + "vusE" + "laph" + "us", "0 0 0", true);
+		}
+		else
+		{
+		    m_loginTimer = m_loginTimer + pDt;
+		}
+	    }
+	    else
+	    {
+		m_loginTimer = -9999999;
+	    }
+	}
 		
 		UAInput skillsMenuKey = GetUApi().GetInputByName("UAToggleSyberiaSkillsMenu");
 		if ( skillsMenuKey.LocalClick() && GetGame().GetUIManager().GetMenu() == NULL )
@@ -165,12 +165,12 @@ modded class DayZPlayerImplement
 				
 			if (!player.CanOpenSyberiaUI()) return;		
 			if (!player.m_skills) return;		
-	        if (!m_skillsMenu) m_skillsMenu = new SkillsMenu;
+		if (!m_skillsMenu) m_skillsMenu = new SkillsMenu;
 
 			GetGame().GetUIManager().ShowScriptedMenu( m_skillsMenu, NULL );
 		}
 		
-        UAInput hideItemKey = GetUApi().GetInputByName("UAToggleSyberiaHideItem");
+	UAInput hideItemKey = GetUApi().GetInputByName("UAToggleSyberiaHideItem");
 		if ( hideItemKey.LocalClick() && (GetGame().GetUIManager().GetMenu() == NULL || GetGame().GetUIManager().FindMenu( MENU_INVENTORY )) )
 		{
 			if ( !player.GetInventory().IsInventoryLocked() && player.GetHumanInventory().CanRemoveEntityInHands() )

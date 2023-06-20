@@ -275,7 +275,7 @@ ref SyberiaConfig GetSyberiaConfig()
 {
     if (!m_syberiaConfig)
     {
-        m_syberiaConfig = new SyberiaConfig;
+	m_syberiaConfig = new SyberiaConfig;
 		m_syberiaConfig.Init();
     }
     

@@ -55,7 +55,7 @@ class ScreenRespawn extends ScreenBase
 			m_soulsPriceText.SetText("#syb_resp_price " + m_priceSouls);
 		}
 
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	override void Update(float timeslice)

@@ -53,7 +53,7 @@ class HomebookMenu extends UIScriptedMenu
 		
 		m_active = true;
 		m_dirty = true;
-        return layoutRoot;
+	return layoutRoot;
     }
 
 	override void Update(float timeslice)

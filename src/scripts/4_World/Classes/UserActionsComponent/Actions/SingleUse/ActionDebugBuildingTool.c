@@ -39,7 +39,7 @@ class ActionDebugBuildingToolLink extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolLink()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_OPENITEM_ONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_OPENITEM_ONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONFB_OPENITEM_ONCE;
 	}
 	
@@ -101,7 +101,7 @@ class ActionDebugBuildingToolUpgrade extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolUpgrade()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -155,7 +155,7 @@ class ActionDebugBuildingToolObjPos extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolObjPos()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -206,7 +206,7 @@ class ActionDebugBuildingToolObjRot extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolObjRot()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -257,7 +257,7 @@ class ActionDebugBuildingToolDoorID extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolDoorID()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -316,7 +316,7 @@ class ActionDebugBuildingToolElementID extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolElementID()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -370,7 +370,7 @@ class ActionDebugBuildingToolMarker extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolMarker()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	
@@ -416,7 +416,7 @@ class ActionDebugBuildingToolSizer extends ActionSingleUseBase
 {
 	void ActionDebugBuildingToolSizer()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
+		m_CommandUID	= DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONMOD_INTERACTONCE;
 	}
 	

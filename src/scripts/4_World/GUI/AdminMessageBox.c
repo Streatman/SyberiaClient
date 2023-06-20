@@ -24,7 +24,7 @@ class AdminMessageBox extends UIScriptedMenu
 		m_adminMsgActionBtn = ButtonWidget.Cast( layoutRoot.FindAnyWidget("AdminMsgActionBtn") );	
 		m_textWidget = MultilineTextWidget.Cast( layoutRoot.FindAnyWidget("AdminMsgContext") );
 		m_active = true;
-        return layoutRoot;
+	return layoutRoot;
 	}
 	
 	override void Update(float timeslice)

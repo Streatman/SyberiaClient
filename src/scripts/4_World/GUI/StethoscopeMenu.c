@@ -72,7 +72,7 @@ class StethoscopeMenu extends UIScriptedMenu
 		}
 		
 		m_active = true;
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	private void SetBoolValue(string name, bool value)

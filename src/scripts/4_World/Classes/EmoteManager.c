@@ -7,12 +7,12 @@ modded class EmoteManager
 	
     int GetTotalEmotesCount()
     {
-        return m_NameEmoteMap.Count();
+	return m_NameEmoteMap.Count();
     }
     
     int GetEmoteKeyById(int emoteId)
     {
-        return m_NameEmoteMap.GetKey(emoteId);
+	return m_NameEmoteMap.GetKey(emoteId);
     }
     
 	bool IsPlayerSleeping()

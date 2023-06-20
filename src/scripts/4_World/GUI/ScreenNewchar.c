@@ -57,7 +57,7 @@ class ScreenNewchar extends ScreenBase
 		m_currentSkillInc = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "CurrentSkillInc" ) );
 		m_currentSkillDec = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "CurrentSkillDec" ) );
 		
-        return layoutRoot;
+	return layoutRoot;
     }
 	
 	override void OnShow()

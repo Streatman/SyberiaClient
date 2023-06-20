@@ -5,7 +5,7 @@ class PluginSyberiaRpc : PluginBase
     void PluginSyberiaRpc() 
 	{
 		m_RegisteredRPCs = new map<int, ref Param2<Class, string>>;
-        GetDayZGame().Event_OnRPC.Insert(ServerRPCHandler);
+	GetDayZGame().Event_OnRPC.Insert(ServerRPCHandler);
     }
 
     void ~PluginSyberiaRpc() 
@@ -15,7 +15,7 @@ class PluginSyberiaRpc : PluginBase
 			delete element;
 		}
 		
-        GetDayZGame().Event_OnRPC.Remove(ServerRPCHandler);
+	GetDayZGame().Event_OnRPC.Remove(ServerRPCHandler);
     }
 
     void ServerRPCHandler(PlayerIdentity sender, Object target, int rpc_type, ParamsReadContext ctx) 
@@ -60,7 +60,7 @@ class PluginSyberiaRpc : PluginBase
 			auto sendData = new ref array< ref Param >;
 			sendData.Insert(new ref Param1<int>( id ));
 			sendData.Insert(params);
-        	GetGame().RPC(null, 67993700, sendData, true, identity);
+		GetGame().RPC(null, 67993700, sendData, true, identity);
 		}
     }
 	
@@ -71,7 +71,7 @@ class PluginSyberiaRpc : PluginBase
 			auto sendData = new ref array< ref Param >;
 			sendData.Insert(new ref Param1<int>( id ));
 			sendData.Insert(params);
-        	GetGame().RPC(null, 67993700, sendData, true, null);
+		GetGame().RPC(null, 67993700, sendData, true, null);
 		}
     }
 	
@@ -82,7 +82,7 @@ class PluginSyberiaRpc : PluginBase
 			auto sendData = new ref array< ref Param >;
 			sendData.Insert(new ref Param1<int>( id ));
 			sendData.Insert(params);
-        	GetGame().RPC(null, 67993700, sendData, true, null);
+		GetGame().RPC(null, 67993700, sendData, true, null);
 		}
     }
 }

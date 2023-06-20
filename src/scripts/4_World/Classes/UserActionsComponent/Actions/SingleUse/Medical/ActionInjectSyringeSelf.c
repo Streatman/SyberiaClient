@@ -52,7 +52,7 @@ class ActionInjectSyringeSelf: ActionSingleUseBase
 			action_data.m_MainItem.OnApply(action_data.m_Player);
 		}
 		
-        action_data.m_MainItem.SetCleanness(0);
+	action_data.m_MainItem.SetCleanness(0);
 		action_data.m_Player.ServerReplaceItemWithNew(new ReplaceItemWithNewLambda(action_data.m_MainItem, "SyringeEmpty", action_data.m_Player));
 	}
 	

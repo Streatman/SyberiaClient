@@ -207,7 +207,7 @@ class GameHelpers
 		}
 		
 		result = "0 0 0";
-        return false;
+	return false;
 	}
 	
 	static bool IntersectBBox(vector min, vector max, vector point)

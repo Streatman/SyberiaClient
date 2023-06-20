@@ -55,11 +55,11 @@ class PluginGearPDA extends PluginBase
 		
 		if (!FileExist(m_configDir + contactsBinFilename)) {
 			SaveOptionsConfig();
-            SaveContactsConfig();
-        } else {
+	    SaveContactsConfig();
+	} else {
 			LoadOptionsConfig();
-            LoadContactsConfig();
-        }
+	    LoadContactsConfig();
+	}
 	}
 	
 	void SaveOptionsConfig()
@@ -160,7 +160,7 @@ class PluginGearPDA extends PluginBase
 				request.Insert(m_contacts[i].m_id);
 			}
 			GetSyberiaRPC().SendToServer( SyberiaRPC.SYBRPC_PDA_CHECK_CONTACT, new Param1< ref array<int> >( request ) );
-            delete request;
+	    delete request;
 		}
 	}
 	
