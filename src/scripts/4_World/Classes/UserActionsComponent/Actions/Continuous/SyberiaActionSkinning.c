@@ -14,11 +14,6 @@ modded class ActionSkinningCB
 
 modded class ActionSkinning
 {
-	override string GetText()
-	{
-		return "#syb_skinning_action";
-	}
-	
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
 	{
 		Object targetObject = target.GetObject();
@@ -28,6 +23,12 @@ modded class ActionSkinning
 			{
 				AnimalBase animal = AnimalBase.Cast(targetObject);
 				if (animal && !animal.IsSkinned() && !animal.IsAlive())
+				{
+					return true;
+				}
+				
+				SurvivorBase survivor = SurvivorBase.Cast(targetObject);
+				if (survivor && !survivor.IsSkinned() && !survivor.IsAlive())
 				{
 					return true;
 				}

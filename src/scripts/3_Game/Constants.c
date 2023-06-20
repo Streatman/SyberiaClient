@@ -2,7 +2,8 @@ const string Syberia_ModPreffix = "[SYBERIA] ";
 const bool Syberia_DebugMode = false;
 const string Syberia_Version = "OPEN BETA 0.50B";
 
-class SyberiaVersionChecker {
+class SyberiaVersionChecker
+{
 	void CLIENT_AND_SERVER_MODS_VERSION_MISSMATCH_0_50B() {}
 }
 
@@ -43,7 +44,7 @@ enum SyberiaERPC {
 };
 
 enum SyberiaRPC {
-    SYBRPC_RESPAWN_SCREEN_OPEN,
+	SYBRPC_RESPAWN_SCREEN_OPEN,
 	SYBRPC_NEWCHAR_SCREEN_OPEN,
 	SYBRPC_EQUIP_SCREEN_OPEN,
 	SYBRPC_CREATENEWCHAR_REQUEST,
@@ -80,7 +81,6 @@ enum SyberiaRPC {
 	SYBRPC_SKILLS_ACTIVATE,
 	SYBRPC_STETHOSCOPE_INSPECT,
 	SYBRPC_CURRENT_ZONE_SYNC,
-	SYBRPC_SYNC_TOXIC_ZONES,
 	SYBRPC_OPEN_TRADE_MENU,
 	SYBRPC_CLOSE_TRADER_MENU,
 	SYBRPC_ACTION_TRADER,
@@ -187,14 +187,14 @@ const int LEVELED_NTFKEY_BADGES[LEVELED_NTFKEY_BADGES_COUNT] = {
 class SyberiaConfig
 {
 	// Auth	
-    ref array<string> m_allowedLettersInName = new array<string>;
-    
+	ref array<string> m_allowedLettersInName = new array<string>;
+	
 	// Sleeping
 	int m_sleepingMaxValue;
-    int m_sleepingLevel5;
-    int m_sleepingLevel4;
-    int m_sleepingLevel3;
-    int m_sleepingLevel2;
+	int m_sleepingLevel5;
+	int m_sleepingLevel4;
+	int m_sleepingLevel3;
+	int m_sleepingLevel2;
 	
 	// Mindstate
 	float m_mindstateMaxValue;
@@ -256,82 +256,102 @@ class SyberiaConfig
 		
 		// Sleeping
 		m_sleepingMaxValue = ConfigGetInt("CfgSyberia SleepingSystem sleepingMaxValue");
-	    m_sleepingLevel5 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel5");
-	    m_sleepingLevel4 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel4");
-	    m_sleepingLevel3 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel3");
-	    m_sleepingLevel2 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel2");
+		m_sleepingLevel5 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel5");
+		m_sleepingLevel4 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel4");
+		m_sleepingLevel3 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel3");
+		m_sleepingLevel2 = ConfigGetInt("CfgSyberia SleepingSystem sleepingLevel2");
 		
 		// Mindstate
 		m_mindstateMaxValue = ConfigGetFloat("CfgSyberia MindstateSystem mindstateMaxValue");
-	    m_mindstateLevel5 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel5");
-	    m_mindstateLevel4 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel4");
-	    m_mindstateLevel3 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel3");
-	    m_mindstateLevel2 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel2");
+		m_mindstateLevel5 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel5");
+		m_mindstateLevel4 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel4");
+		m_mindstateLevel3 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel3");
+		m_mindstateLevel2 = ConfigGetFloat("CfgSyberia MindstateSystem mindstateLevel2");
 	}
 };
 
 static ref SyberiaConfig m_syberiaConfig = null;
 ref SyberiaConfig GetSyberiaConfig()
 {
-    if (!m_syberiaConfig)
-    {
-	m_syberiaConfig = new SyberiaConfig;
+	if (!m_syberiaConfig)
+	{
+		m_syberiaConfig = new SyberiaConfig;
 		m_syberiaConfig.Init();
-    }
-    
-    return m_syberiaConfig;
+	}
+	
+	return m_syberiaConfig;
 };
 
 // Constants redefinition
 modded class PlayerConstants
 {
-	static const float CHANCE_TO_BLEED_SLIDING_LADDER_PER_SEC = 0.1; // probability of bleeding source occuring while sliding down ladder without gloves given as percentage per second(0.5 means 50% chance bleeding source will happen every second while sliding down) 
-	static const float GLOVES_DAMAGE_SLIDING_LADDER_PER_SEC = -0.5;// how much damage the gloves receive while sliding down the ladder (per sec)
-
-	static const float BAREFOOT_MOVEMENT_BLEED_MODIFIER = 0.05;
-	static const float SHOES_MOVEMENT_DAMAGE_PER_STEP = 0.003;
-	
-	static const float BLEEDING_SOURCE_BLOODLOSS_PER_SEC = -0.5;
+	static const float BLEEDING_SOURCE_BLOODLOSS_PER_SEC = -0.75;
 	static const float BLOOD_REGEN_RATE_PER_SEC	= 0.05; //base amount of blood regenerated per second 
 	
-	static const float LOW_ENERGY_DAMAGE_PER_SEC			= 0.03;	//health loss per second while low on energy
-	static const float LOW_WATER_DAMAGE_PER_SEC				= 0.04;	//health loss per second while low on water
+//	static const float LOW_ENERGY_DAMAGE_PER_SEC = 0.03;//0.05;//health loss per second while low on energy
+//	static const float LOW_WATER_DAMAGE_PER_SEC = 0.04;	//0.05;//health loss per second while low on water
 	
-	static const float HEALTH_REGEN_MIN	= 0.002;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
-	static const float HEALTH_REGEN_MAX	= 0.01;	//health regen rate at MAXIMUM blood level
+	static const float HEALTH_REGEN_MIN = 0.002;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
+	static const float HEALTH_REGEN_MAX = 0.01;	//health regen rate at MAXIMUM blood level
 	
-	static const float SHOCK_REFILL_CONSCIOUS_SPEED			= 0.8;		//shock refill speed when the player is conscious
-	static const float SHOCK_REFILl_UNCONSCIOUS_SPEED		= 0.28;		//shock refill speed when the player is unconscious
+	static const float SHOCK_REFILL_CONSCIOUS_SPEED = 0.8;		//shock refill speed when the player is conscious
+	static const float SHOCK_REFILl_UNCONSCIOUS_SPEED = 0.28;		//shock refill speed when the player is unconscious
 	
 	
 	// Metabolic
-	static const float SL_ENERGY_CRITICAL = 0;
-	static const float SL_ENERGY_LOW = 1000;
-	static const float SL_ENERGY_NORMAL = 2000;
-	static const float SL_ENERGY_HIGH = 2800;
-	static const float LOW_ENERGY_THRESHOLD = 0.01;
+	static const float SL_ENERGY_CRITICAL 	=	 0;
+	static const float SL_ENERGY_LOW		=  150;
+	static const float SL_ENERGY_NORMAL 	= 1500;
+	static const float SL_ENERGY_HIGH		= 4500;
+	static const float SL_ENERGY_MAX		= 5000;
+	static const float LOW_ENERGY_THRESHOLD =  150;
 	
-	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.01;		//energy loss per second while idle	
-	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.02;		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.10;		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.20;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_BASAL	 = 0.01;		//energy loss per second while idle	
+	static const float METABOLIC_SPEED_ENERGY_WALK	 = 0.10;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_JOG	 = 0.30;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_SPRINT = 1.20;		//energy loss per second
 	
 	// Water
-	static const float SL_WATER_CRITICAL = 0;
-	static const float SL_WATER_LOW = 500;
-	static const float SL_WATER_NORMAL = 1000;
-	static const float SL_WATER_HIGH = 1300;
-	static const float LOW_WATER_THRESHOLD = 0.01;
+	static const float SL_WATER_CRITICAL 	=	 0;
+	static const float SL_WATER_LOW 		=  150;
+	static const float SL_WATER_NORMAL 		= 1500;
+	static const float SL_WATER_HIGH 		= 4500;
+	static const float SL_WATER_MAX 		= 5000;
+	static const float LOW_WATER_THRESHOLD  =  150;
 
-	static const float METABOLIC_SPEED_WATER_BASAL		= 0.01;		//water loss per second while idle	
-	static const float METABOLIC_SPEED_WATER_WALK		= 0.03;		//water loss per second
-	static const float METABOLIC_SPEED_WATER_JOG		= 0.15;		//water loss per second
-	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.30;		//water loss per second
+	static const float METABOLIC_SPEED_WATER_BASAL	= 0.01;		//water loss per second while idle	
+	static const float METABOLIC_SPEED_WATER_WALK	= 0.10;		//water loss per second
+	static const float METABOLIC_SPEED_WATER_JOG	= 0.30;		//water loss per second
+	static const float METABOLIC_SPEED_WATER_SPRINT	= 0.60;		//water loss per second
 	
-	static const float HEALTH_LOSS_HC_PLUS_LOW				= 0.01;
-	static const float HEALTH_LOSS_HC_PLUS_HIGH				= 0.05;			
-	static const float HEALTH_LOSS_HC_MINUS_LOW				= 0.05;
-	static const float HEALTH_LOSS_HC_MINUS_HIGH 			= 0.10;	
+	// Temperature
+	static const float THRESHOLD_HEAT_COMFORT_PLUS_WARNING	=  0.25;// 0.2
+	static const float THRESHOLD_HEAT_COMFORT_PLUS_CRITICAL =  0.50;// 0.5
+	static const float THRESHOLD_HEAT_COMFORT_PLUS_EMPTY	=  0.75;// 0.9
+	
+	static const float THRESHOLD_HEAT_COMFORT_MINUS_WARNING	= -0.25;//-0.3
+	static const float THRESHOLD_HEAT_COMFORT_MINUS_CRITICAL= -0.50;//-0.5
+	static const float THRESHOLD_HEAT_COMFORT_MINUS_EMPTY	= -0.75;//-0.9
+	
+	static const float WATER_LOSS_THRESHOLD_HC_PLUS_LOW		=  0.25;// 0.2
+	static const float WATER_LOSS_THRESHOLD_HC_PLUS_HIGH	=  0.75;// 0.5
+	
+	static const float ENERGY_LOSS_THRESHOLD_HC_MINUS_LOW	= -0.25;//-0.3
+	static const float ENERGY_LOSS_THRESHOLD_HC_MINUS_HIGH	= -0.75;//-0.5
+	
+	static const float WATER_LOSS_HC_PLUS_LOW	 = 0.0;
+	static const float WATER_LOSS_HC_PLUS_HIGH	 = 0.4;
+
+	static const float ENERGY_LOSS_HC_MINUS_LOW	 = 0.0;
+	static const float ENERGY_LOSS_HC_MINUS_HIGH = 0.4;
+	
+	static const float HEALTH_LOSS_HC_PLUS_LOW	 = 0.00;//0.05
+	static const float HEALTH_LOSS_HC_PLUS_MID	 = 0.05;//
+	static const float HEALTH_LOSS_HC_PLUS_HIGH	 = 0.15;//0.15
+	
+	static const float HEALTH_LOSS_HC_MINUS_LOW	 = 0.00;//0.05
+	static const float HEALTH_LOSS_HC_MINUS_MID  = 0.05;//
+	static const float HEALTH_LOSS_HC_MINUS_HIGH = 0.15;//0.15
 };
 
 modded class GameConstants

@@ -1,9 +1,9 @@
 class TurnCombineSybLambda : TurnItemIntoItemLambda
 {
-    ItemBase m_ampouleSource;
+	ItemBase m_ampouleSource;
 	
 	void InitValues(ItemBase ampouleSource)
 	{
-	m_ampouleSource = ampouleSource;
+		m_ampouleSource = ampouleSource;
 	}
 };

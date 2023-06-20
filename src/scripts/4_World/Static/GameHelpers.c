@@ -6,13 +6,13 @@ class GameHelpers
 		if (overdosedIncrement > 3) effects.Insert("#syb_med_killoverdose"); 
 			
 		int medPainkillerLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medPainkillerLevel" );
-		if (medPainkillerLevel > 0) effects.Insert("#syb_med_painkill " + medPainkillerLevel + " #syb_skill_level3"); 
+		if (medPainkillerLevel > 0) effects.Insert("#syb_med_painkill " + medPainkillerLevel + " #syb_skill_level2"); 
 		
 		int medStomatchhealLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medStomatchhealLevel" );
-		if (medStomatchhealLevel > 0) effects.Insert("#syb_med_stomachheal " + medStomatchhealLevel + " #syb_skill_level3"); 
+		if (medStomatchhealLevel > 0) effects.Insert("#syb_med_stomachheal " + medStomatchhealLevel + " #syb_skill_level2"); 
 		
 		int medAntibioticLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medAntibioticLevel" );
-		if (medAntibioticLevel > 0) effects.Insert("#syb_med_antibiotic " + medAntibioticLevel + " #syb_skill_level3"); 
+		if (medAntibioticLevel > 0) effects.Insert("#syb_med_antibiotic " + medAntibioticLevel + " #syb_skill_level2"); 
 		
 		int medRemoveSepsis = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medRemoveSepsis" );
 		if (medRemoveSepsis > 0) effects.Insert("#syb_med_sepsis"); 
@@ -33,13 +33,13 @@ class GameHelpers
 		if (medHematomaHeal > 0) effects.Insert("#syb_med_hematoma"); 
 		
 		int medAdrenalinLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medAdrenalinLevel" );
-		if (medAdrenalinLevel > 0) effects.Insert("#syb_med_adrenalin " + medAdrenalinLevel + " #syb_skill_level3"); 
+		if (medAdrenalinLevel > 0) effects.Insert("#syb_med_adrenalin " + medAdrenalinLevel + " #syb_skill_level2"); 
 		
 		int medAntiradLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medRadioprotectionLevel" );
-		if (medAntiradLevel > 0) effects.Insert("#syb_med_antirad " + medAntiradLevel + " #syb_skill_level3"); 
+		if (medAntiradLevel > 0) effects.Insert("#syb_med_antirad " + medAntiradLevel + " #syb_skill_level2"); 
 		
 		int medAntidepLevel = GetGame().ConfigGetInt( "CfgVehicles " + classname + " medAntidepresantLevel" );
-		if (medAntidepLevel > 0) effects.Insert("#syb_med_antidepresant " + medAntidepLevel + " #syb_skill_level3"); 
+		if (medAntidepLevel > 0) effects.Insert("#syb_med_antidepresant " + medAntidepLevel + " #syb_skill_level2"); 
 	}
 	
 	static Transport GetPlayerVehicle(PlayerBase player)
@@ -192,14 +192,14 @@ class GameHelpers
 	
 	static bool GetCursorPos(out vector result)
 	{
-	    if ( GetGame().GetPlayer() )
+		if ( GetGame().GetPlayer() )
 		{
 			vector rayStart = GetGame().GetCurrentCameraPosition();
-		    vector rayEnd = rayStart + GetGame().GetCurrentCameraDirection() * 10000;
-		    vector hitPos;
-		    vector hitNormal;
-		    int hitComponentIndex;
-		    if (DayZPhysics.RaycastRV(rayStart, rayEnd, hitPos, hitNormal, hitComponentIndex, NULL, NULL, GetGame().GetPlayer()))
+			vector rayEnd = rayStart + GetGame().GetCurrentCameraDirection() * 10000;
+			vector hitPos;
+			vector hitNormal;
+			int hitComponentIndex;
+			if (DayZPhysics.RaycastRV(rayStart, rayEnd, hitPos, hitNormal, hitComponentIndex, NULL, NULL, GetGame().GetPlayer()))
 			{
 				result = hitPos;
 				return true;
@@ -207,7 +207,7 @@ class GameHelpers
 		}
 		
 		result = "0 0 0";
-	return false;
+		return false;
 	}
 	
 	static bool IntersectBBox(vector min, vector max, vector point)

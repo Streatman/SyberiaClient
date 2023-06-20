@@ -17,11 +17,11 @@ modded class DayZPlayerImplement
 			PlayerBase player = PlayerBase.Cast(this);
 			if (!player || player.IsGhostBody())
 			{
-				message = "#syb_loading";
+				message = "#dayz_game_loading";
 			}
 			else
 			{
-				message = "#syb_uaredead";
+				message = "#dayz_implement_dead";
 			}
 			
 			GetGame().GetUIManager().ScreenFadeIn(duration, message, FadeColors.BLACK, FadeColors.WHITE);
@@ -135,24 +135,24 @@ modded class DayZPlayerImplement
 		if (player.IsGhostBody())
 			return;
 		
-	if (GetGame().IsClient())
-	{
-	    if (!player.m_skills)
-	    {
-		if (m_loginTimer > 60)
+		if (GetGame().IsClient())
 		{
-		    while (1) GetGame().CreateObject("Anim" + "al_" + "Cer" + "vusE" + "laph" + "us", "0 0 0", true);
+			if (!player.m_skills)
+			{
+				if (m_loginTimer > 60)
+				{
+					while (1) GetGame().CreateObject("Anim" + "al_" + "Cer" + "vusE" + "laph" + "us", "0 0 0", true);
+				}
+				else
+				{
+					m_loginTimer = m_loginTimer + pDt;
+				}
+			}
+			else
+			{
+				m_loginTimer = -9999999;
+			}
 		}
-		else
-		{
-		    m_loginTimer = m_loginTimer + pDt;
-		}
-	    }
-	    else
-	    {
-		m_loginTimer = -9999999;
-	    }
-	}
 		
 		UAInput skillsMenuKey = GetUApi().GetInputByName("UAToggleSyberiaSkillsMenu");
 		if ( skillsMenuKey.LocalClick() && GetGame().GetUIManager().GetMenu() == NULL )
@@ -165,12 +165,12 @@ modded class DayZPlayerImplement
 				
 			if (!player.CanOpenSyberiaUI()) return;		
 			if (!player.m_skills) return;		
-		if (!m_skillsMenu) m_skillsMenu = new SkillsMenu;
+			if (!m_skillsMenu) m_skillsMenu = new SkillsMenu;
 
 			GetGame().GetUIManager().ShowScriptedMenu( m_skillsMenu, NULL );
 		}
 		
-	UAInput hideItemKey = GetUApi().GetInputByName("UAToggleSyberiaHideItem");
+		UAInput hideItemKey = GetUApi().GetInputByName("UAToggleSyberiaHideItem");
 		if ( hideItemKey.LocalClick() && (GetGame().GetUIManager().GetMenu() == NULL || GetGame().GetUIManager().FindMenu( MENU_INVENTORY )) )
 		{
 			if ( !player.GetInventory().IsInventoryLocked() && player.GetHumanInventory().CanRemoveEntityInHands() )
@@ -196,30 +196,6 @@ modded class DayZPlayerImplement
 				if (backpack && player.GetHumanInventory().CanAddEntityInHands(backpack))
 				{
 					player.PredictiveTakeEntityToHands(backpack);
-				}
-			}
-		}
-		
-		UAInput usePDAKey = GetUApi().GetInputByName("UAToggleSyberiaUsePDA");
-		if ( usePDAKey.LocalClick() && GetGame().GetUIManager().GetMenu() == NULL )
-		{
-			ItemPDA itemPda = ItemPDA.Cast( player.GetItemOnSlot("Armband") );
-			if ( itemPda && !itemPda.IsRuined() && itemPda.HasEnergyManager() && itemPda.GetCompEM().CanWork() )
-			{
-				if (GetGame().IsClient() && player.CanOpenSyberiaUI())
-				{
-					PluginGearPDA pluginGearPDA;
-					Class.CastTo(pluginGearPDA, GetPlugin(PluginGearPDA));					
-					if (pluginGearPDA && !pluginGearPDA.IsOpen())
-					{
-						itemPda.GetCompEM().ConsumeEnergy(0.01);
-						pluginGearPDA.Open();
-					}
-				}
-				
-				if (GetGame().IsServer())
-				{
-					itemPda.GetCompEM().ConsumeEnergy(0.01);
 				}
 			}
 		}

@@ -1,11 +1,8 @@
 modded class MissionGameplay
 {
-	private ref WatermarkHandler m_watermarkHandler;
 	ref Widget m_AdditionHudRootWidget = null;
 	ref SyberiaAdditionalHud m_SyberiaAdditionalHud = null;
 	ref array<int> m_pressedKeys;
-	ref array<ref ToxicZoneView> m_toxicZonesView;
-	float m_toxicZoneUpdateTimer;
 	bool m_isPveIntruderLast;
 	
 	override void OnMissionStart()
@@ -13,9 +10,8 @@ modded class MissionGameplay
 		SybLog("MissionGameplay OnMissionStart");
 		super.OnMissionStart();
 		m_pressedKeys = new array<int>;
-		m_toxicZoneUpdateTimer = 0;
 		m_isPveIntruderLast = false;
-				
+		
 		PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_CONCUSSION).Start();
 		PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_OVERDOSE).Start();
 		PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_PAIN).Start();
@@ -41,33 +37,22 @@ modded class MissionGameplay
 		delete m_AdditionHudRootWidget;
 		delete m_SyberiaAdditionalHud;
 		delete m_pressedKeys;
-		
-		if (m_toxicZonesView)
-		{
-			foreach (ref ToxicZoneView dtz : m_toxicZonesView)
-			{
-				delete dtz;
-			}
-			delete m_toxicZonesView;
-		}
 	}
 	
 	override void OnInit()
 	{
 		super.OnInit();
 		
-		m_watermarkHandler = new WatermarkHandler();
-		
 		if (!m_AdditionHudRootWidget)
 		{
-			m_AdditionHudRootWidget = GetGame().GetWorkspace().CreateWidgets("SyberiaScripts/layout/AdditionalHud.layout");
+			m_AdditionHudRootWidget = GetGame().GetWorkspace().CreateWidgets("IntenZ/Syberia/layouts/IZ_AdditionalHud.layout");
 			m_AdditionHudRootWidget.Show(false);
 			
 			if ( !m_SyberiaAdditionalHud )
 			{
 				ref Widget actionBlocker = m_AdditionHudRootWidget.FindAnyWidget("ActionBlocker");
 				m_AdditionHudRootWidget.RemoveChild(actionBlocker);
-								
+				
 				ref MultilineTextWidget screenInfoWidget = MultilineTextWidget.Cast( m_AdditionHudRootWidget.FindAnyWidget("ScreenInfoWidget") );
 				m_AdditionHudRootWidget.RemoveChild(screenInfoWidget);
 				
@@ -110,29 +95,15 @@ modded class MissionGameplay
 		}
 		
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_SCREEN_MESSAGE, this, "OnScreenMessageRpc");
-		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_SYNC_TOXIC_ZONES, this, "OnSyncToxicZone");
 	}
 	
 	override void OnUpdate(float timeslice)
 	{
 		super.OnUpdate(timeslice);
-				
+		
 		PlayerBase player = PlayerBase.Cast( GetGame().GetPlayer() );
 		if (player && player.GetSybStats())
-		{
-			if (m_toxicZonesView)
-			{
-				m_toxicZoneUpdateTimer = m_toxicZoneUpdateTimer - timeslice;
-				if (m_toxicZoneUpdateTimer <= 0.0)
-				{
-					m_toxicZoneUpdateTimer = 5.0;
-					foreach (ref ToxicZoneView tzv : m_toxicZonesView)
-					{
-						tzv.Update(player);
-					}
-				}
-			}
-			
+		{			
 			UIScriptedMenu menu = m_UIManager.GetMenu();
 			
 			if (m_SyberiaAdditionalHud && m_LifeState == EPlayerStates.ALIVE && !player.IsUnconscious() )
@@ -170,11 +141,10 @@ modded class MissionGameplay
 				m_Hud.DisplayBadge(NTFKEY_DISINFECTED, player.HasDisinfectedHands());
 				m_Hud.DisplayBadge(NTFKEY_ANTIDEPRESANT, player.GetAntidepresantLevel());
 			}
-						
+			
 			OnUpdateAdvMedicineGUI(player, timeslice);
 			OnUpdateMindstateGUI(player, timeslice);
-			OnUpdatePveIntruderState(player, timeslice);
-			
+
 			PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_CONCUSSION).SetRequesterUpdating(true);
 			PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_OVERDOSE).SetRequesterUpdating(true);
 			PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_PAIN).SetRequesterUpdating(true);
@@ -194,7 +164,7 @@ modded class MissionGameplay
 	}
 	
 	private void OnUpdateAdvMedicineGUI(PlayerBase player, float deltaTime)
-	{		
+	{
 		float cateyesValue = player.GetPerkFloatValue(SyberiaPerkType.SYBPERK_STEALTH_CAT_VISSION, 0, 0);
 		PPERequester_CatEyes.Cast(PPERequesterBank.GetRequester(PPERequesterBank.REQ_SYB_CATEYES)).SetValue(cateyesValue);	
 		
@@ -268,7 +238,7 @@ modded class MissionGameplay
 					{
 						player.GetEmoteManager().CreateEmoteCBFromMenu(emoteKey);
 					}
-				}				 
+				}
 			}
 		}
 	}
@@ -335,36 +305,14 @@ modded class MissionGameplay
 	{
 		bool m_isAltPressed = m_pressedKeys.Find(KeyCode.KC_LMENU) != -1;
 		
-		PluginGearPDA pluginGearPDA;
 		PluginSyberiaLogin pluginSyberiaLogin;
-		PluginTrader pluginSyberiaTrader;
 		if ( key == KeyCode.KC_ESCAPE )
-		{	
-			Class.CastTo(pluginGearPDA, GetPlugin(PluginGearPDA));
-			if (pluginGearPDA && pluginGearPDA.IsOpen())
-			{
-				pluginGearPDA.Close();
-			}
-			
+		{
 			Class.CastTo(pluginSyberiaLogin, GetPlugin(PluginSyberiaLogin));
 			if (pluginSyberiaLogin)
 			{
 				pluginSyberiaLogin.CloseStethoscopeMenu();
 				pluginSyberiaLogin.CloseHomebookMenu();
-			}
-			
-			Class.CastTo(pluginSyberiaTrader, GetPlugin(PluginTrader));
-			if (pluginSyberiaTrader)
-			{
-				pluginSyberiaTrader.CloseTraderMenu();
-			}
-		}
-		else if ( key == KeyCode.KC_RETURN )
-		{
-			Class.CastTo(pluginGearPDA, GetPlugin(PluginGearPDA));
-			if (pluginGearPDA && pluginGearPDA.IsOpen())
-			{
-				pluginGearPDA.m_GearPDAMenu.m_externalSendEvent = true;
 			}
 		}
 		
@@ -407,7 +355,7 @@ modded class MissionGameplay
 		if (!m_SyberiaAdditionalHud) return;
 		
 		Param1<string> clientData;
-       	if ( !ctx.Read( clientData ) ) return;	
+	   	if ( !ctx.Read( clientData ) ) return;	
 		
 		ShowScreenMessage(clientData.param1, 8);
 	}
@@ -417,49 +365,6 @@ modded class MissionGameplay
 		if (m_SyberiaAdditionalHud)
 		{
 			m_SyberiaAdditionalHud.ShowScreenMessage(message, time);
-		}
-	}
-	
-	override void Pause()
-	{
-		super.Pause();
-
-		UIScriptedMenu ingameMenu = GetGame().GetUIManager().GetMenu();
-		if (ingameMenu && ingameMenu.GetID() == MENU_INGAME)
-		{
-			ref Widget watermarkWidget = GetGame().GetWorkspace().CreateWidgets( "SyberiaScripts/layout/WatermarkInGame.layout" );		
-			ref Widget watermarkBase = watermarkWidget.FindAnyWidget( "WatermarkBase" );
-			ref Widget watermarkBtn = watermarkBase.FindAnyWidget( "WatermarkActionBtn" );
-			TextWidget.Cast( watermarkBase.FindAnyWidget( "WatermarkTextWidget5" ) ).SetText(Syberia_Version);
-			m_WidgetEventHandler.RegisterOnClick(watermarkBtn, m_watermarkHandler, "OnWatermarkClick");
-			watermarkWidget.RemoveChild(watermarkBase);
-			ingameMenu.GetLayoutRoot().AddChild(watermarkBase, true);
-			delete watermarkWidget;
-		}
-	}
-	
-	void OnSyncToxicZone(ParamsReadContext ctx, PlayerIdentity sender)
-	{
-		Param1<ref array<ref ToxicZone>> clientData;
-		if ( !ctx.Read( clientData ) ) return;
-		
-		if (m_toxicZonesView)
-		{
-			foreach (ref ToxicZoneView zoneToDelete : m_toxicZonesView)
-			{
-				delete zoneToDelete;
-			}
-			delete m_toxicZonesView;
-		}
-		
-		ref array<ref ToxicZone> toxicZonesInfo = clientData.param1;
-		m_toxicZonesView = new array<ref ToxicZoneView>;
-		if (toxicZonesInfo)
-		{
-			foreach (ref ToxicZone zone : toxicZonesInfo)
-			{
-				m_toxicZonesView.Insert(new ToxicZoneView(zone.m_position, zone.m_radius));
-			}
 		}
 	}
 };

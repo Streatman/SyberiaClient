@@ -1,6 +1,6 @@
 modded class ActionEmptyBottleBase
 {
-    override bool ActionBlockerCondition( PlayerBase player, ActionTarget target, ItemBase item )
+	override bool ActionBlockerCondition( PlayerBase player, ActionTarget target, ItemBase item )
 	{
 		return (item && item.IsTemperatureVisible() && item.GetTemperature() < 0);
 	}

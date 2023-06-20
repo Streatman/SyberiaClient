@@ -11,7 +11,7 @@ class PluginSyberiaOptions extends PluginBase
 	protected void OnReceiveClientOptions(ParamsReadContext ctx, PlayerIdentity sender)
 	{
 		Param3<ref PluginSyberiaOptions_Client, int, string> clientData;
-       	if ( !ctx.Read( clientData ) ) return;	
+	   	if ( !ctx.Read( clientData ) ) return;	
 		
 		m_client = clientData.param1;
 		m_clientCharacterId = clientData.param2;
@@ -40,5 +40,5 @@ class PluginSyberiaOptions_Client
 
 PluginSyberiaOptions GetSyberiaOptions() 
 {
-    return PluginSyberiaOptions.Cast(GetPlugin(PluginSyberiaOptions));
+	return PluginSyberiaOptions.Cast(GetPlugin(PluginSyberiaOptions));
 }

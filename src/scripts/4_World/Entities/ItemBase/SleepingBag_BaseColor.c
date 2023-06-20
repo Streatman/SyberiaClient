@@ -1,42 +1,42 @@
 class SleepingBag_BaseColor : ItemBase
 {
 	override void OnPlacementComplete( Man player, vector position = "0 0 0", vector orientation = "0 0 0" )
-    {	
-	super.OnPlacementComplete( player, position, orientation );
-	
-	if ( GetGame().IsServer() )
 	{
+		super.OnPlacementComplete( player, position, orientation );
+		
+		if ( GetGame().IsServer() )
+		{
 			PlayerBase pb = PlayerBase.Cast( player );
 			string placedClassname = GetGame().ConfigGetTextOut("CfgVehicles " + GetType() + " placedName");
-	    Object sleepingBagPlacedObject = GetGame().CreateObject(placedClassname, pb.GetLocalProjectionPosition(), false );
-	    sleepingBagPlacedObject.SetPosition( position );
-	    sleepingBagPlacedObject.SetOrientation( orientation );
+			Object sleepingBagPlacedObject = GetGame().CreateObject(placedClassname, pb.GetLocalProjectionPosition(), false );
+			sleepingBagPlacedObject.SetPosition( position );
+			sleepingBagPlacedObject.SetOrientation( orientation );
 
 			string placedSound;
 			if ( GetGame().ConfigGetText("CfgVehicles " + placedClassname + " placedSound", placedSound) )
 			{
 				SyberiaSoundEmitter.Spawn(placedSound, position);
-			}	  
-	}    
-    }
-    
-    override string GetLoopDeploySoundset()
-    {
-	return "";
-    }
+			}
+		}
+	}
+	
+	override string GetLoopDeploySoundset()
+	{
+		return "";
+	}
 	
 	override bool IsBasebuildingKit()
 	{
 		return true;
 	}
-    
-    override void SetActions()
-    {
-	super.SetActions();
 	
-	AddAction(ActionTogglePlaceObject);
-	AddAction(ActionPlaceObject);
-    }
+	override void SetActions()
+	{
+		super.SetActions();
+		
+		AddAction(ActionTogglePlaceObject);
+		AddAction(ActionPlaceObject);
+	}
 };
 
 class SleepingBagPlacing : BaseBuildingBase

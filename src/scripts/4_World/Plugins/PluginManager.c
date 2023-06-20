@@ -2,19 +2,15 @@ modded class PluginManager
 {
 	override void Init()
 	{
+		super.Init();
+		
 		RegisterPlugin("PluginSyberiaRpc", true, true);
-		RegisterPlugin("PluginLogicPDA", true, true);
 		RegisterPlugin("PluginSyberiaOptions", true, true);
-	RegisterPlugin("PluginTrader", true, true);
+		RegisterPlugin("PluginAdminTool", true, true);
 		
 		if (GetGame().IsClient())
 		{
 			RegisterPlugin("PluginSyberiaLogin", true, false);
-			RegisterPlugin("PluginGearPDA", true, false);
 		}
-		
-	RegisterPlugin("PluginAdminTool", true, true);
-	
-		super.Init();
 	}
 }

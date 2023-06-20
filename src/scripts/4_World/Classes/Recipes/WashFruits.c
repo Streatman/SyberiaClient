@@ -45,12 +45,12 @@ class WashFruits extends RecipeBase
 
 	private bool CanDoInternal(ItemBase item1, ItemBase item2)
 	{
-	if (!item1)
+		if (!item1)
 		{
 			return false;
 		}
-	
-	if (!item1.IsFruit() && !item1.IsMushroom())
+		
+		if (!item1.IsFruit() && !item1.IsMushroom())
 		{
 			return false;
 		}

@@ -1,0 +1,18 @@
+MetaFileClass {
+ Name "{728500DE4279871C}IntenZ/SyberiaClient/PDA/ImageSets/Marker.edds"
+ Author "desktop-5v1ml8a"
+ ChangeDate -1589908247
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "marker.png"
+   FormatCompress Copy
+   TiledTexture 0
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

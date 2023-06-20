@@ -82,7 +82,6 @@ modded class PlayerBase
 	{
 		super.SetActions(InputActionMap);
 		AddAction(ActionSearchTargetInventory, InputActionMap);
-		AddAction(ActionTraderInteract, InputActionMap);
 		AddAction(ActionOpenHomebook, InputActionMap);
 	}
 	
@@ -92,21 +91,6 @@ modded class PlayerBase
 		AddAction(ActionStethoscopeInspect, InputActionMap);
 		AddAction(ActionCheckName, InputActionMap);
 		AddAction(ActionSayName, InputActionMap);			
-	}
-	
-	override void IncreaseDiseaseCount()
-	{
-		m_DiseaseCount = 0;
-	}
-	
-	override void DecreaseDiseaseCount()
-	{
-		m_DiseaseCount = 0;
-	}
-	
-	override bool HasDisease()
-	{
-		return false;
 	}
 	
 	override bool IsBleeding()
@@ -122,7 +106,7 @@ modded class PlayerBase
 		return result;
 	}
 	
-	override protected float GetWeightSpecialized(bool forceRecalc = false)
+	override float GetWeightSpecialized(bool forceRecalc = false)
 	{
 		float result = super.GetWeightSpecialized(forceRecalc);
 		result = result * (1.0 - GetPerkFloatValue(SyberiaPerkType.SYBPERK_STRENGTH_STAMINA_KG_TO, 0, 0));
@@ -210,7 +194,7 @@ modded class PlayerBase
 		float diff = m_mindStateValue - m_mindStateLast;
 		if (diff < 0)
 		{
-			if (diff > -0.1) return -1;
+			if (diff > -0.05) return -1;
 			if (diff > -1.0) return -2;
 			return -3;
 		}
@@ -243,7 +227,7 @@ modded class PlayerBase
 			{
 				bool skipMaskCondition = false;
 				string itemMaskType = itemCheck.GetType();
-				if (itemMaskType.IndexOf("Balaclava3Holes_") == 0)
+				if (itemMaskType.IndexOf("Balaclava3Holes_") == 0 || itemMaskType.IndexOf("IZ_Balaclava3Holes_") == 0)
 				{
 					skipMaskCondition = true;
 				}

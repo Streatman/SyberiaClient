@@ -58,8 +58,5 @@ class PPERequester_SybRadiation : PPERequester_GameplayBase
 		float grainMod = Math.Clamp(m_RadiationValue, 0, 1);
 		SetTargetValueColor(PostProcessEffectType.Glow,PPEGlow.PARAM_COLORIZATIONCOLOR,m_RadEffectColors,PPEGlow.L_RADIATION,PPOperators.SUBSTRACT);
 		
-		// TODO: ADD FILMFRAIN EFFECT
-		//SetTargetValueFloat(PostProcessEffectType.FilmGrain,PPEFilmGrain.PARAM_SHARPNESS,false,10.0,PPEFilmGrain.L_1_TOXIC_TINT,PPOperators.HIGHEST);
-		//SetTargetValueFloat(PostProcessEffectType.FilmGrain,PPEFilmGrain.PARAM_GRAINSIZE,false,1.0,PPEFilmGrain.L_2_TOXIC_TINT,PPOperators.LOWEST);
 	}
 };

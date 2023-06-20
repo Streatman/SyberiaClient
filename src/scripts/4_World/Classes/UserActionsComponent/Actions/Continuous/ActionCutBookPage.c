@@ -11,7 +11,7 @@ class ActionCutBookPage extends ActionContinuousBase
 	void ActionCutBookPage()
 	{
 		m_CallbackClass = ActionCutBookPageCB;
-		m_CommandUID      = DayZPlayerConstants.CMD_ACTIONFB_CRAFTING;
+		m_CommandUID	  = DayZPlayerConstants.CMD_ACTIONFB_CRAFTING;
 		m_FullBody = true;
 		m_StanceMask = DayZPlayerConstants.STANCEMASK_CROUCH;
 		m_SpecialtyWeight = UASoftSkillsWeight.PRECISE_LOW;

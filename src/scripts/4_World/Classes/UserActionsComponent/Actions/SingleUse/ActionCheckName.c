@@ -15,7 +15,7 @@ class ActionCheckName: ActionInteractBase
 
 	override string GetText()
 	{
-		return "#syb_inspect_player";
+		return "#inspect_title";
 	}
 
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
@@ -76,7 +76,7 @@ class ActionSayName: ActionInteractBase
 
 	override string GetText()
 	{
-		return "#syb_say_name";
+		return "#syb_action_say_name";
 	}
 
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )

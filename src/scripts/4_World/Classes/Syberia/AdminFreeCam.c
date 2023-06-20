@@ -46,8 +46,8 @@ class AdminFreeCam extends Camera
 	override void EOnFrame( IEntity other, float timeSlice )
 	{
 		vector OldOrientation = GetOrientation();
-		vector oldPos    = GetPosition();
-		vector oldDir    = GetDirection();
+		vector oldPos	= GetPosition();
+		vector oldDir	= GetDirection();
 
 		Input input = GetGame().GetInput();
 		

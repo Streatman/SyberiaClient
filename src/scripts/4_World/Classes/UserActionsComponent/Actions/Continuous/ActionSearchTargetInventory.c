@@ -25,7 +25,7 @@ class ActionSearchTargetInventory : ActionContinuousBase
 
 	override string GetText()
 	{
-		return "#syb_search_target_inv";
+		return "#syb_action_search";
 	}
 	
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )

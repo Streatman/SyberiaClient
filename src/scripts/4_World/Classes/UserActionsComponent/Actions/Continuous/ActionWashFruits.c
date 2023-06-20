@@ -26,8 +26,8 @@ class ActionWashFruitsWell: ActionContinuousBase
 		{
 			return false;
 		}
-	
-	if (!fruit.IsFruit() && !fruit.IsMushroom())
+		
+		if (!fruit.IsFruit() && !fruit.IsMushroom())
 		{
 			return false;
 		}
@@ -69,8 +69,8 @@ class ActionWashFruitsWater: ActionContinuousBase
 		{
 			return false;
 		}
-	
-	if (!fruit.IsFruit() && !fruit.IsMushroom())
+		
+		if (!fruit.IsFruit() && !fruit.IsMushroom())
 		{
 			return false;
 		}

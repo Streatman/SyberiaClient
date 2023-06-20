@@ -1,12 +1,11 @@
 modded class PluginRecipesManagerBase
 {
-    override void RegisterRecipies()
-    {
-	super.RegisterRecipies();
-	RegisterRecipe(new CraftSyringeFill);
-	RegisterRecipe(new CraftCombineSyb);
-	RegisterRecipe(new WashFruits);
-    }
+	override void RegisterRecipies()
+	{
+		super.RegisterRecipies();
+		RegisterRecipe(new CraftCombineSyb);
+		RegisterRecipe(new WashFruits);
+	}
 };
 
 modded class PluginRecipesManager
@@ -25,7 +24,7 @@ modded class PluginRecipesManager
 	protected void OnReceiveSettings(ParamsReadContext ctx, PlayerIdentity sender)
 	{
 		Param2<ref array<string>, ref array<ref PluginRecipesManager_CustomRecipeData>> clientData;
-       	if ( !ctx.Read( clientData ) ) return;	
+	   	if ( !ctx.Read( clientData ) ) return;	
 		
 		ref array<string> recipesToUnreg = clientData.param1;
 		foreach (string disabledRecipeClass : recipesToUnreg)

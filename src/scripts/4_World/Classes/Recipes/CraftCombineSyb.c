@@ -2,7 +2,7 @@ class CraftCombineSyb extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "#syb_combine";
+		m_Name = "#layout_icon_combine";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 0.6;//animation length in relative time units
 		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision

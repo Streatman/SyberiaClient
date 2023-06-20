@@ -36,7 +36,7 @@ class PluginSyberiaLogin extends PluginBase
 		if (player.IsGhostBody())
 		{
 			if (!player.IsAlive() && !m_isRespawnCommited)
-			{
+			{				
 				GetGame().RespawnPlayer();
 				m_isRespawnCommited = true;
 				
@@ -56,22 +56,22 @@ class PluginSyberiaLogin extends PluginBase
 	}
 	
 	void RespawnScreen_Open(ParamsReadContext ctx, PlayerIdentity sender)
-    {   
+	{   
 		SybLog("PluginSyberiaLogin SYBRPC_RESPAWN_SCREEN_OPEN RPC Received.");
 				
 		if (m_screenBase) m_screenBase.Close();
 		
 		Param4<string, int, int, int> clientData;
-       	if ( !ctx.Read( clientData ) ) return;			
+	   	if ( !ctx.Read( clientData ) ) return;			
 		m_screenBase = new ScreenRespawn(clientData.param1, clientData.param2, clientData.param3, clientData.param4);
 	}
 	
 	void NewcharScreen_Open(ParamsReadContext ctx, PlayerIdentity sender)
-    {   
+	{   
 		SybLog("PluginSyberiaLogin SYBRPC_NEWCHAR_SCREEN_OPEN RPC Received.");
 		
 		Param1<ref RpcNewCharContainer> clientData;
-       	if ( !ctx.Read( clientData ) ) return;			
+	   	if ( !ctx.Read( clientData ) ) return;			
 		
 		if (m_screenBase) m_screenBase.Close();
 		
@@ -150,8 +150,8 @@ class PluginSyberiaLogin extends PluginBase
 					}
 
 					
-					string message = "#syb_skill_up_part1 '#syb_skill" + changedSkill + "' #syb_skill_up_part2 " + newSkills.GetSkillValueInt(changedSkill) + ". ";
-					message = message + "#syb_skill_up_part3 '" + keyName + "' #syb_skill_up_part4";
+					string message = "#syb_skill_up_part1 '#syb_skill" + changedSkill + "' #syb_skill_up_part2 " + newSkills.GetSkillValueInt(changedSkill) + "#syb_skill_up_part3" + " ";
+					message = message + "#syb_skill_up_part4 '" + keyName + "'#syb_skill_up_part5";
 					mission.ShowScreenMessage(message, 15 );
 				}
 			}

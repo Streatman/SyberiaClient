@@ -350,8 +350,8 @@ class LivespaceDoorData
 {
 	int m_selfDoorId;
 	ref array<int> m_linkedDoorIds;
-    bool m_outerDoor;
-    ref array<string> m_levels;
+	bool m_outerDoor;
+	ref array<string> m_levels;
 	string m_upgradeProfile;
 	
 	void LivespaceDoorData(string configPath)
@@ -378,7 +378,7 @@ class LivespaceDoorData
 
 class LivespaceBarricadeData
 {
-    ref array<string> m_levels;
+	ref array<string> m_levels;
 	
 	void LivespaceBarricadeData(string configPath)
 	{

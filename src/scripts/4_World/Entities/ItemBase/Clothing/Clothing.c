@@ -4,8 +4,8 @@ modded class Clothing
 	{
 		return true;
 	}
-
-	override bool IsInventoryBlocked()
+	
+/*	override bool IsInventoryBlocked()
 	{
 		if (GetGame().IsClient())
 		{
@@ -24,5 +24,5 @@ modded class Clothing
 		}
 		
 		return super.IsInventoryBlocked();
-	}
+	}*/
 };
