@@ -227,7 +227,7 @@ modded class PlayerBase
 			{
 				bool skipMaskCondition = false;
 				string itemMaskType = itemCheck.GetType();
-				if (itemMaskType.IndexOf("Balaclava3Holes_") == 0 || itemMaskType.IndexOf("IZ_Balaclava3Holes_") == 0)
+				if (itemMaskType.IndexOf("Balaclava3Holes_") == 0 || itemMaskType.IndexOf("IZ_Balaclava3Holes_") == 0 || itemMaskType.IndexOf("Chainmail_Coif") == 0 || itemMaskType.IndexOf("Shemagh_Scarf_") == 0)
 				{
 					skipMaskCondition = true;
 				}

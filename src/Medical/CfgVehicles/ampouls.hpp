@@ -164,10 +164,6 @@ class AmpouleSodiumOxybutirate : SyberiaMedicineAmpoule
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_co.paa" };
 };
 
-
-
-
-
 class AmpouleMetoclopramid : SyberiaMedicineAmpoule
 {
 	scope=2;
@@ -197,6 +193,7 @@ class AmpouleKetorol : SyberiaMedicineAmpoule
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=1200;
 	medAntibioticsStrength=2.0;
+	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_green_co.paa" };
 };
 
@@ -220,9 +217,6 @@ class AmpouleHeptral : SyberiaMedicineAmpoule
 	overdosedIncrement=0.3;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_co.paa" };
 };
-
-
-
 
 class AmpouleCylaspen : SyberiaMedicineAmpoule
 {
@@ -316,8 +310,6 @@ class AmpouleAmoksivan : SyberiaMedicineAmpoule
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_red_co.paa" };
 };
 
-
-
 class AmpouleZivirol : SyberiaMedicineAmpoule
 {
 	scope=2;
@@ -353,8 +345,6 @@ class AmpouleNeiroks : SyberiaMedicineAmpoule
 	overdosedIncrement=0.5;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_co.paa" };
 };
-
-
 
 class AmpoulePeklitakcel : SyberiaMedicineAmpoule
 {
@@ -434,10 +424,8 @@ class AmpouleErytropoenin : SyberiaMedicineAmpoule
 	medBloodHematopoiesisTimeSec=900;
 	medBloodHemostatic=1;
 	medBloodHemostaticTimeSec=900;
-	overdosedIncrement=0.5;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\ampoule_red_co.paa" };
 };
-
 
 class AmpouleAdrenalin05 : SyberiaMedicineAmpoule
 {

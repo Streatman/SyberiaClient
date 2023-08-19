@@ -61,6 +61,7 @@ class InjectorErytropoenin : InjectorBase
 	medBloodHematopoiesisTimeSec=900;
 	medBloodHemostatic=1;
 	medBloodHemostaticTimeSec=900;
+	overdosedIncrement=0.2;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\injector_red_co.paa" };
 };
 
@@ -96,7 +97,7 @@ class InjectorKetorol : InjectorBase
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=1800;
 	medAntibioticsStrength=2.0;
-	overdosedIncrement=0.25;
+	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={ "intenz\syberiaclient\medical\data\injector_green_co.paa" };
 };
 

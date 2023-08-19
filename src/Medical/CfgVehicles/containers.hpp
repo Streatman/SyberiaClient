@@ -75,7 +75,7 @@ class MedContainerLarge: Container_Base
 	scope=2;
 	displayName="#syb_medcontainer_large_name";
 	descriptionShort="#syb_medcontainer_large_desc";
-	model="IntenZ\gear\MetalCase\MetalCase.p3d";
+	model="IntenZ\Storage\MetalCase\MetalCase.p3d";
 	rotationFlags=17;
 	weight=500;
 	itemSize[]={4,4};
@@ -90,14 +90,14 @@ class MedContainerLarge: Container_Base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"IntenZ\gear\MetalCase\Data\MetalCase_Medic_co.paa"
+		"IntenZ\Storage\MetalCase\Data\MetalCase_Medic_co.paa"
 	};
 	hiddenSelectionsMaterials[]=
 	{
-		"IntenZ\gear\MetalCase\Data\MetalCase_medic.rvmat"
+		"IntenZ\Storage\MetalCase\Data\MetalCase_medic.rvmat"
 	};
 	
-	ITEM_DAMAGE_SYSTEM(100, "IntenZ\gear\MetalCase\Data\MetalCase_tools.rvmat", "IntenZ\gear\MetalCase\Data\MetalCase_tools_damage.rvmat", "IntenZ\gear\MetalCase\Data\MetalCase_tools_destruct.rvmat");
+	ITEM_DAMAGE_SYSTEM(100, "IntenZ\Storage\MetalCase\Data\MetalCase_tools.rvmat", "IntenZ\Storage\MetalCase\Data\MetalCase_tools_damage.rvmat", "IntenZ\Storage\MetalCase\Data\MetalCase_tools_destruct.rvmat");
 	
 	class AnimEvents
 	{

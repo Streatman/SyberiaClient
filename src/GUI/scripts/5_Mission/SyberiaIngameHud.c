@@ -72,11 +72,12 @@ modded class IngameHud
 		int redColor = ARGB( 255, 220, 0, 0 );
 		int whiteColor = ARGB( 255, 220, 220, 220 );
 		int badgetColor = ARGB( 255, 220, 220, 220 );
+		
 		if (key == NTFKEY_FRACTURE || key == NTFKEY_CONCUSSION)
 		{
 			badgetColor = yellowColor;
 		}
-		else if (key == NTFKEY_SICK || key == NTFKEY_BULLETHIT || key == NTFKEY_KNIFEHIT || key == NTFKEY_VISCERADMG || key == NTFKEY_SEPSIS || key == NTFKEY_ZVIRUS)
+		else if (key == NTFKEY_SICK || key == NTFKEY_BULLETHIT || key == NTFKEY_KNIFEHIT || key == NTFKEY_VISCERADMG || key == NTFKEY_ZVIRUS)
 		{
 			badgetColor = redColor;
 		}
@@ -110,8 +111,34 @@ modded class IngameHud
 				badgetColor = whiteColor;
 			}
 		}
-		else if (key == NTFKEY_STOMATCHPOISONING || key == NTFKEY_RADIATIONSICKNESS)
+		else if (key == NTFKEY_STOMATCHPOISONING)
 		{
+			if (value > 1)
+			{
+				badgetColor = redColor;
+			}
+			else
+			{
+				badgetColor = yellowColor;
+			}
+		}
+	/*	else if ( key == NTFKEY_TOXIC )
+		{
+			if (value > 1)
+			{
+				badgetColor = redColor; //Want to make it Blink
+			}
+			else
+			{
+				badgetColor = redColor;
+			}
+		}
+	*/	else if ( key == NTFKEY_SEPSIS || key == NTFKEY_RADIATIONSICKNESS )
+		{
+			if (value > 2)
+			{
+				badgetColor = redColor; //Want to make it Blink
+			}
 			if (value > 1)
 			{
 				badgetColor = redColor;
@@ -164,7 +191,6 @@ modded class IngameHud
 			}
 			
 			w_count.SetText( badgeText );
-		//	w_count.SetColor(badgetColor);
 		}
 	}
 }

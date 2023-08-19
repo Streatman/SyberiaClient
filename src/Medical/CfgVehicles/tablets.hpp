@@ -165,7 +165,6 @@ class TabletsParacetamol : TabletsBase
 	medAntibioticLevel=1;
 	medAntibioticsTimeSec=200;
 	medAntibioticsStrength = 0.5;
-	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Blue_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
@@ -180,7 +179,6 @@ class TabletsIbuprofen : TabletsBase
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=400;
 	medAntibioticsStrength = 0.8;
-	overdosedIncrement=0.2;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Magenta_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
@@ -195,7 +193,6 @@ class TabletsNurofen : TabletsBase
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=600;
 	medAntibioticsStrength = 1.0;
-	overdosedIncrement=0.2;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Red_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
@@ -480,7 +477,6 @@ class TabletsSorbiferDurulis : TabletsBase
 	medBloodHematopoiesisTimeSec=300;
 	medBloodHemostatic=1;
 	medBloodHemostaticTimeSec=300;
-	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Beige_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };

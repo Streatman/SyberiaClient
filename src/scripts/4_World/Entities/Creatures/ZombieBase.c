@@ -13,6 +13,11 @@ modded class ZombieBase
 		return !m_isInventoryBlocked;
 	}
 	
+//	override bool CanDisplayCargo()
+//	{
+//		return !m_isInventoryBlocked;
+//	}
+	
 	bool IsInventoryBlocked()
 	{
 		return m_isInventoryBlocked;	

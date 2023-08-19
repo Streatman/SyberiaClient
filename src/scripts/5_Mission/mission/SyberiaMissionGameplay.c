@@ -140,6 +140,8 @@ modded class MissionGameplay
 				m_Hud.DisplayBadge(NTFKEY_RADIOPROTECTION, player.GetRadioprotectionLevel());
 				m_Hud.DisplayBadge(NTFKEY_DISINFECTED, player.HasDisinfectedHands());
 				m_Hud.DisplayBadge(NTFKEY_ANTIDEPRESANT, player.GetAntidepresantLevel());
+			//	m_Hud.DisplayBadge(NTFKEY_TOXIC, player.GetAntidepresantLevel());
+			//	m_Hud.DisplayBadge(NTFKEY_HEMOLYTIC, player.GetAntidepresantLevel());
 			}
 			
 			OnUpdateAdvMedicineGUI(player, timeslice);

@@ -76,6 +76,10 @@ class CfgVehicles
 	{
 		bulletProofProtection=0.1;
 	};
+	class Chestplate: Clothing
+	{
+		bulletProofProtection=0.1;
+	};
 	class GasMask: Clothing
 	{
 		radiationProtection=0.31;
