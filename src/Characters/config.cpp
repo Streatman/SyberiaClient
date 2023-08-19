@@ -389,7 +389,8 @@ class CfgVehicles
 	{
 		storageCategory=3;
 		knifeDamageModifier=0.25;
-	/*	class Skinning
+		skinTimeModifier=0.5;
+		class Skinning
 		{
 			class ObtainedSteaks
 			{
@@ -400,7 +401,7 @@ class CfgVehicles
 			class ObtainedFeathers
 			{
 				item="ChickenFeather";
-				count=10;
+				count=2;
 				quantityMinMaxCoef[]={0.5,1};
 				transferToolDamageCoef=1;
 			};
@@ -417,13 +418,14 @@ class CfgVehicles
 				quantityMinMaxCoef[]={0.2,0.3};
 				transferToolDamageCoef=1;
 			};
-		};*/
+		};
 	};
 	
 	class DeadRabbit: Edible_Base
 	{
 		storageCategory=3;
 		knifeDamageModifier=0.25;
+		skinTimeModifier=0.5;
 		class Skinning
 		{
 			class ObtainedSteaks
@@ -436,7 +438,7 @@ class CfgVehicles
 			{
 				item="RabbitPelt";
 				count=1;
-				quantityMinMaxCoef[]={0.5,1};
+				quantityCoef=1;
 				transferToolDamageCoef=1;
 			};
 			class ObtainedGuts
@@ -451,6 +453,48 @@ class CfgVehicles
 				count=1;
 				quantityMinMaxCoef[]={0.2,0.3};
 				transferToolDamageCoef=1;
+			};
+		};
+	};
+	class Carp: Edible_Base
+	{
+		storageCategory=3;
+		knifeDamageModifier=0.25;
+		skinTimeModifier=0.25;
+		class Skinning
+		{
+			class ObtainedSteaks
+			{
+				item="CarpFilletMeat";
+				count=2;
+				quantityMinMaxCoef[]={0.5,1};
+			};
+			class ObtainedGuts
+			{
+				item="SmallGuts";
+				count=0;
+				quantityMinMaxCoef[]={0.5,0.8};
+			};
+		};
+	};
+	class Mackerel: Edible_Base
+	{
+		storageCategory=3;
+		knifeDamageModifier=0.25;
+		skinTimeModifier=0.25;
+		class Skinning
+		{
+			class ObtainedSteaks
+			{
+				item="MackerelFilletMeat";
+				count=2;
+				quantityMinMaxCoef[]={0.5,1};
+			};
+			class ObtainedGuts
+			{
+				item="SmallGuts";
+				count=0;
+				quantityMinMaxCoef[]={0.5,0.8};
 			};
 		};
 	};
