@@ -35,13 +35,3 @@ class TabletsBase: Edible_Base
 		return super.GetTooltip() + additionalText;
 	}
 };
-class TabletBottleBase: TabletsBase
-{
-	override void SetActions()
-	{
-		super.SetActions();
-		
-		RemoveAction(ActionEatTabletFromWrapper);
-		AddAction(ActionEatPillFromBottle);
-	}
-};
