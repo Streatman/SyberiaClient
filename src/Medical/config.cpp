@@ -49,10 +49,7 @@ class CfgVehicles
 	}
 	
 	class Inventory_Base;
-	class Edible_Base: Inventory_Base
-	{
-		varTemperatureMin=-100;
-	};
+	class Edible_Base;
 	class Clothing;
 	class Container_Base;
 	

@@ -52,6 +52,12 @@ class TabletsBase : Edible_Base
 		};
 	};
 };
+class TabletBottleBase : TabletsBase
+{
+	model="intenz\syberia\bottle.p3d";
+	hiddenSelections[]={"bottle"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\bottle\bottle.rvmat", "intenz\syberia\data\bottle\bottle_damage.rvmat", "intenz\syberia\data\bottle\bottle_destruct.rvmat");
+};
 class TabletsTetracycline : TabletsBase
 {
 	scope=2;
@@ -60,7 +66,7 @@ class TabletsTetracycline : TabletsBase
 	displayName="#syb_tetracycline";
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=900;
-	medAntibioticsStrength = 1.5;
+	medAntibioticsStrength=1.5;
 	overdosedIncrement=0.2;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_1_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -154,33 +160,27 @@ class TabletsCytramon : TabletsBase
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Green_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
-class TabletsParacetamol : TabletsBase
+class TabletsParacetamol : TabletBottleBase
 {
 	scope=2;
-	model="intenz\syberia\tablets1.p3d";
-	hiddenSelections[]={"pills"};
 	displayName="#syb_paracetamol";
 	medPainkillerLevel=1;
 	medPainkillerTimeSec=1000;
 	medAntibioticLevel=1;
 	medAntibioticsTimeSec=200;
-	medAntibioticsStrength = 0.5;
-	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Blue_co.paa"};
-	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
+	medAntibioticsStrength=0.5;
+	hiddenSelectionsTextures[]={"intenz\syberia\data\bottle\paracetamol_co.paa"};
 };
-class TabletsIbuprofen : TabletsBase
+class TabletsIbuprofen : TabletBottleBase
 {
 	scope=2;
-	model="intenz\syberia\tablets1.p3d";
-	hiddenSelections[]={"pills"};
 	displayName="#syb_ibuprofen";
 	medPainkillerLevel=1;
 	medPainkillerTimeSec=800;
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=400;
-	medAntibioticsStrength = 0.8;
-	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Magenta_co.paa"};
-	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
+	medAntibioticsStrength=0.8;
+	hiddenSelectionsTextures[]={"intenz\syberia\data\bottle\ibuprofen_co.paa"};
 };
 class TabletsNurofen : TabletsBase
 {
@@ -192,7 +192,7 @@ class TabletsNurofen : TabletsBase
 	medPainkillerTimeSec=800;
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=600;
-	medAntibioticsStrength = 1.0;
+	medAntibioticsStrength=1.0;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Red_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
@@ -204,7 +204,7 @@ class TabletsAmoksiklav : TabletsBase
 	displayName="#syb_amoksiklav";
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=1200;
-	medAntibioticsStrength = 1.5;
+	medAntibioticsStrength=1.5;
 	overdosedIncrement=0.25;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Cyan_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -217,7 +217,7 @@ class TabletsAmpicylin : TabletsBase
 	displayName="#syb_ampicilin";
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=900;
-	medAntibioticsStrength = 1.3;
+	medAntibioticsStrength=1.3;
 	overdosedIncrement=0.23;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_2_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -230,7 +230,7 @@ class TabletsPiperacylin : TabletsBase
 	displayName="#syb_piperacyclin";
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=1100;
-	medAntibioticsStrength = 1.4;
+	medAntibioticsStrength=1.4;
 	overdosedIncrement=0.25;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Grey_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -243,7 +243,7 @@ class TabletsTrihopol : TabletsBase
 	displayName="#syb_trihopol";
 	medAntibioticLevel=1;
 	medAntibioticsTimeSec=400;
-	medAntibioticsStrength = 0.8;
+	medAntibioticsStrength=0.8;
 	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Red_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -256,7 +256,7 @@ class TabletsCyprolet : TabletsBase // weis rund
 	displayName="#syb_cyprolet";
 	medAntibioticLevel=1;
 	medAntibioticsTimeSec=500;
-	medAntibioticsStrength = 0.8;
+	medAntibioticsStrength=0.8;
 	overdosedIncrement=0.15;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Grey_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -269,7 +269,7 @@ class TabletsAmoksivan : TabletsBase
 	displayName="#syb_amoksivan";
 	medAntibioticLevel=2;
 	medAntibioticsTimeSec=600;
-	medAntibioticsStrength = 1.2;
+	medAntibioticsStrength=1.2;
 	overdosedIncrement=0.28;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Beige_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
@@ -282,7 +282,7 @@ class TabletsAmibaktam : TabletsBase
 	displayName="#syb_amibaktam";
 	medAntibioticLevel=1;
 	medAntibioticsTimeSec=300;
-	medAntibioticsStrength = 0.5;
+	medAntibioticsStrength=0.5;
 	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Beige_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
@@ -477,53 +477,68 @@ class TabletsSorbiferDurulis : TabletsBase
 	medBloodHematopoiesisTimeSec=300;
 	medBloodHemostatic=1;
 	medBloodHemostaticTimeSec=300;
-	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Beige_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Ocean_co.paa"};
 	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsPotassiumIodide : TabletsBase
 {
-	scope=0;
+	scope=2;
+	model="intenz\syberia\tablets1.p3d";
+	hiddenSelections[]={"pills"};
 	displayName="#syb_potassium_iodide";
 	medRadioprotectionLevel=1;
 	medRadioprotectionTimer=60;
 	overdosedIncrement=0.2;
-	hiddenSelectionsTextures[]={"intenz\syberiaclient\medical\data\tablets_white_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Blue_co.paa"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsPotassiumHexacyanoferrate : TabletsBase
 {
-	scope=0;
+	scope=2;
+	model="intenz\syberia\tablets3.p3d";
+	hiddenSelections[]={"pills"};
 	displayName="#syb_potassium_hexacyanoferrate";
 	medRadioprotectionLevel=1;
 	medRadioprotectionTimer=90;
 	overdosedIncrement=0.3;
-	hiddenSelectionsTextures[]={"intenz\syberiaclient\medical\data\tablets_black_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_ocean_co.paa"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsCystamine : TabletsBase
 {
-	scope=0;
+	scope=2;
+	model="intenz\syberia\tablets2.p3d";
+	hiddenSelections[]={"pills"};
 	displayName="#syb_cystamine";
 	medRadioprotectionLevel=1;
 	medRadioprotectionTimer=120;
 	overdosedIncrement=0.3;
-	hiddenSelectionsTextures[]={"intenz\syberiaclient\medical\data\tablets_brown_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_ocean_co.paa"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsB190 : TabletsBase
 {
-	scope=0;
+	scope=2;
+	model="intenz\syberia\tablets1.p3d";
+	hiddenSelections[]={"pills"};
 	displayName="#syb_b190";
 	medRadioprotectionLevel=1;
 	medRadioprotectionTimer=140;
 	overdosedIncrement=0.3;
-	hiddenSelectionsTextures[]={"intenz\syberiaclient\medical\data\tablets_blue_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_Magenta_co.paa"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsMexamine : TabletsBase
 {
-	scope=0;
+	scope=2;
+	model="intenz\syberia\tablets2.p3d";
+	hiddenSelections[]={"pills"};
 	displayName="#syb_mexamine";
 	medRadioprotectionLevel=2;
 	medRadioprotectionTimer=30;
 	overdosedIncrement=0.6;
-	hiddenSelectionsTextures[]={"intenz\syberiaclient\medical\data\tablets_green_co.paa"};
+	hiddenSelectionsTextures[]={"intenz\syberia\data\tablets\tablets_beige_co.paa"};
+	ITEM_DAMAGE_SYSTEM(50, "intenz\syberia\data\tablets\tablets.rvmat", "intenz\syberia\data\tablets\tablets_damage.rvmat", "intenz\syberia\data\tablets\tablets_destruct.rvmat");
 };
 class TabletsAgteminol : TabletsBase
 {

@@ -82,7 +82,6 @@ modded class PlayerBase
 	{
 		super.SetActions(InputActionMap);
 		AddAction(ActionSearchTargetInventory, InputActionMap);
-		AddAction(ActionOpenHomebook, InputActionMap);
 	}
 	
 	override void SetActionsRemoteTarget(out TInputActionMap InputActionMap)
@@ -177,6 +176,18 @@ modded class PlayerBase
 	bool HasVisibleSepsis()
 	{
 		return m_sybstats.m_sepsis > 1;
+	}
+	bool HasCriticalSepsis()
+	{
+		return m_sybstats.m_sepsis > 2;
+	}
+	bool HasVisibleContamination()
+	{
+		return ( GetSingleAgentCount(eAgents.CHEMICAL_POISON) >= 100 && GetSingleAgentCount(eAgents.CHEMICAL_POISON) < 400 );
+	}
+	bool HasCriticalContamination()
+	{
+		return ( GetSingleAgentCount(eAgents.CHEMICAL_POISON) >= 400);
 	}
 	
 	bool HasVisibleZVirus()
@@ -336,19 +347,6 @@ modded class PlayerBase
 	{
 		int value = GetPerkIntValue(perkId, -1);
 		return value == 1;
-	}
-	
-	bool IsBuildingModeBlocked()
-	{
-		foreach (ref ZoneImplementation zoneImpl : m_zones)
-		{
-			if (zoneImpl.m_zone.m_blockBuildingMode == 1)
-			{
-				return true;
-			}
-		}
-		
-		return false;
 	}
 	
 	bool IsInteractionWithPlayersBlocked()

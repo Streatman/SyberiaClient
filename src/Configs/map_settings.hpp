@@ -2,50 +2,27 @@ class CfgWorlds
 {
 	class DefaultWorld
 	{
-        winterWorld=0;
-        airDayTemperatureMin=10;
-        airDayTemperatureMax=15;
-        airNightTemperatureMin=8;
-        airNightTemperatureMax=12;
-        clothingHeatIsolationGlobal=0.8;
-        
-        temperatureHighConsumeItemsMod=0.02;
-        temperatureLowConsumeItemsMod=-0.01;
-        temperatureDrinkPondPenalty=-0.005;
-        temperatureDrinkWellPenalty=-0.01;
-        temperatureFillWaterBottleTotal=15;
-        temperatureFillWaterBottleMod=0.1;
-        temperatureIceDrain=0;
-        temperatureSnowDrain=0;
-        temperatureHeightReduction=0.002;
-        
-        clothingDrenchedHeatDrain=-5;
-        clothingWetHeatDrain=-2;
-        additionalTemperatureResistForSurvivalSkill=15;
+	//	winterWorld=0;
+		airDayTemperatureMin=10;
+		airDayTemperatureMax=15;
+		airNightTemperatureMin=8;
+		airNightTemperatureMax=12;
+		clothingHeatIsolationGlobal=0.8;
+		
+		temperatureHighConsumeItemsMod=0.02;
+		temperatureLowConsumeItemsMod=-0.01;
+		temperatureDrinkPondPenalty=-0.005;
+		temperatureDrinkWellPenalty=-0.01;
+		temperatureFillWaterBottleTotal=15;
+		temperatureFillWaterBottleMod=0.1;
+		temperatureIceDrain=0;
+		temperatureSnowDrain=0;
+		temperatureHeightReduction=0.002;
+		
+		clothingDrenchedHeatDrain=-5;
+		clothingWetHeatDrain=-2;
+		additionalTemperatureResistForSurvivalSkill=15;
 	};
-	class CAWorld;
-	class namalsk: CAWorld
-	{
-        winterWorld=1;
-        airDayTemperatureMin=-15;
-        airDayTemperatureMax=-10;
-        airNightTemperatureMin=-20;
-        airNightTemperatureMax=-15;
-        clothingHeatIsolationGlobal=1.3;
-        
-        temperatureHighConsumeItemsMod=0.03;
-        temperatureLowConsumeItemsMod=-0.05;
-        temperatureDrinkPondPenalty=-0.05;
-        temperatureDrinkWellPenalty=-0.01;
-        temperatureFillWaterBottleTotal=6;
-        temperatureIceDrain=-40;
-        temperatureSnowDrain=-20;
-        temperatureHeightReduction=0.01;
-        
-        clothingDrenchedHeatDrain=-50;
-        clothingWetHeatDrain=-20;
-        additionalTemperatureResistForSurvivalSkill=30;
-    };
 };
 
 class CfgLocationTypes

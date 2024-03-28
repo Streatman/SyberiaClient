@@ -38,7 +38,7 @@ class ActionSearchTargetInventory : ActionContinuousBase
 		EntityAI targetEntity = EntityAI.Cast( target.GetObject() );
 		if ( !targetEntity ) return false;
 		if (targetEntity.IsAlive()) return false;
-		if (targetEntity.IsInventoryVisible()) return false;
+		if (targetEntity.CanDisplayCargo()) return false;
 
 		return targetEntity.IsZombie();
 	}

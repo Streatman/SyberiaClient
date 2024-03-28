@@ -52,17 +52,10 @@ class CfgVehicles
 		varQuantityMin=0.0;
 		varQuantityMax=36.0;
 	};
-	class Pot: Bottle_Base
-	{
-		varTemperatureMin=-100;
-	};
-	class FryingPan: Inventory_Base
-	{
-		varTemperatureMin=-100;
-	};
 	class Heatpack: Inventory_Base
 	{
-		varTemperatureMin=-100;
+		varTemperatureMax=60;
+		varTemperatureMin=-10;
 	};
 	class PlateCarrierVest: Clothing
 	{
@@ -80,7 +73,15 @@ class CfgVehicles
 	{
 		bulletProofProtection=0.1;
 	};
+	class GP5GasMask: Clothing
+	{
+		radiationProtection=0.31;
+	};
 	class GasMask: Clothing
+	{
+		radiationProtection=0.31;
+	};
+	class AirborneMask: Clothing
 	{
 		radiationProtection=0.31;
 	};
@@ -183,6 +184,10 @@ class CfgVehicles
 		itemSize[]={2,2};
 		weight=250;
 	};
+	class CanisterGasoline: Bottle_Base
+	{
+		vehiclePartItem=1;
+	};
 	class TruckBattery: Inventory_Base
 	{
 		vehiclePartItem=1;
@@ -224,11 +229,6 @@ class CfgVehicles
 	};
 	
 	class TireRepairKit: Inventory_Base
-	{
-		vehiclePartItem=1;
-	};
-	
-	class CanisterGasoline: Inventory_Base
 	{
 		vehiclePartItem=1;
 	};

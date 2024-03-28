@@ -4,7 +4,6 @@ class PluginSyberiaLogin extends PluginBase
 	bool m_isRespawnCommited = false;
 	
 	autoptr StethoscopeMenu m_stethoscopeMenu;
-	autoptr HomebookMenu m_homebookMenu;
 	
 	void ~PluginSyberiaLogin()
 	{
@@ -19,7 +18,6 @@ class PluginSyberiaLogin extends PluginBase
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_CREATENEWCHAR_ERROR, this, "NewcharScreen_Error");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_SKILLS_UPDATE, this, "OnSkillsUpdate");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_STETHOSCOPE_INSPECT, this, "OnStethoscopeInspect");
-		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_HOMEBOOK_OPEN, this, "OnHomebookOpen");
 		GetSyberiaRPC().RegisterHandler(SyberiaRPC.SYBRPC_CURRENT_ZONE_SYNC, this, "OnCurrentZoneSync");
 	}
 	
@@ -186,47 +184,6 @@ class PluginSyberiaLogin extends PluginBase
 		if (m_stethoscopeMenu && m_stethoscopeMenu.m_active)
 		{
 			m_stethoscopeMenu.m_active = false;
-		}
-	}
-	
-	void OnHomebookOpen(ParamsReadContext ctx, PlayerIdentity sender)
-	{
-		Param2<BuildingLivespace, ref LivespaceHomebookData> clientData;
-		if ( !ctx.Read( clientData ) ) return;	
-		
-		PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());		
-		if (player)
-		{
-			if (m_homebookMenu && m_homebookMenu.m_active)
-			{
-				m_homebookMenu.m_active = false;
-			}
-			
-			if (GetGame().GetUIManager().GetMenu() != NULL || !player || !player.CanOpenSyberiaUI())
-			{
-				return;
-			}
-			
-			if (clientData.param1 == null || !clientData.param1.IsReady())
-			{
-				return;
-			}
-			
-			if (clientData.param2 == null)
-			{
-				return;
-			}
-			
-			m_homebookMenu = new HomebookMenu(clientData.param1, clientData.param2);
-			GetGame().GetUIManager().ShowScriptedMenu( m_homebookMenu, NULL );
-		}
-	}
-	
-	void CloseHomebookMenu()
-	{
-		if (m_homebookMenu && m_homebookMenu.m_active)
-		{
-			m_homebookMenu.m_active = false;
 		}
 	}
 	

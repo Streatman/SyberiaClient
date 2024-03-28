@@ -2,7 +2,7 @@ class ActionPlugStethoscope extends ActionSingleUseBase
 {
 	void ActionPlugStethoscope()
 	{
-		m_CommandUID        = DayZPlayerConstants.CMD_ACTIONMOD_OPENITEM_ONCE;
+		m_CommandUID      = DayZPlayerConstants.CMD_ACTIONMOD_OPENITEM_ONCE;
 		m_CommandUIDProne = DayZPlayerConstants.CMD_ACTIONFB_OPENITEM_ONCE;
 	}
 	

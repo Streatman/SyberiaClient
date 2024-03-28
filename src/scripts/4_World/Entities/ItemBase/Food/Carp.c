@@ -1,6 +1,6 @@
 modded class Carp
 {
-	override bool CanBeSkinned()
+/*	override bool CanBeSkinned()
 	{
 		if ( GetHealthLevel() == GameConstants.STATE_RUINED )
 			return false;
@@ -14,5 +14,5 @@ modded class Carp
 	override bool IsAlive()
 	{
 		return false;
-	}
-}
+	}*/
+};

@@ -2,7 +2,7 @@ modded class ActionEmptyBottleBase
 {
 	override bool ActionBlockerCondition( PlayerBase player, ActionTarget target, ItemBase item )
 	{
-		return (item && item.IsTemperatureVisible() && item.GetTemperature() < 0);
+		return (item && item.GetTemperature() < 0 && item.IsLiquidPresent() && item.GetLiquidType() == LIQUID_WATER);
 	}
 	
 	override string ActionBlockerText( PlayerBase player, ActionTarget target, ItemBase item )

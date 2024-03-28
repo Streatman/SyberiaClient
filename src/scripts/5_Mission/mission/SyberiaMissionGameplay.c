@@ -125,7 +125,7 @@ modded class MissionGameplay
 				m_Hud.DisplayBadge(NTFKEY_PAINKILLER, player.GetSybStats().m_painkillerEffect);
 				m_Hud.DisplayBadge(NTFKEY_ANTIBIOTIC, player.GetSybStats().m_antibioticsLevel);
 				m_Hud.DisplayBadge(NTFKEY_STOMATCHHEAL, player.GetSybStats().m_stomatchhealLevel);
-				m_Hud.DisplayBadge(NTFKEY_SEPSIS, player.HasVisibleSepsis());
+				m_Hud.DisplayBadge(NTFKEY_SEPSIS, player.HasVisibleSepsis() + player.HasCriticalSepsis());
 				m_Hud.DisplayBadge(NTFKEY_ZVIRUS, player.HasVisibleZVirus());
 				m_Hud.DisplayBadge(NTFKEY_BANDAGE1, player.GetSybStats().m_bulletBandage1 + player.GetSybStats().m_knifeBandage1);
 				m_Hud.DisplayBadge(NTFKEY_BANDAGE2, player.GetSybStats().m_bulletBandage2 + player.GetSybStats().m_knifeBandage2);
@@ -140,8 +140,7 @@ modded class MissionGameplay
 				m_Hud.DisplayBadge(NTFKEY_RADIOPROTECTION, player.GetRadioprotectionLevel());
 				m_Hud.DisplayBadge(NTFKEY_DISINFECTED, player.HasDisinfectedHands());
 				m_Hud.DisplayBadge(NTFKEY_ANTIDEPRESANT, player.GetAntidepresantLevel());
-			//	m_Hud.DisplayBadge(NTFKEY_TOXIC, player.GetAntidepresantLevel());
-			//	m_Hud.DisplayBadge(NTFKEY_HEMOLYTIC, player.GetAntidepresantLevel());
+			//	m_Hud.DisplayBadge(NTFKEY_TOXIC, player.HasVisibleToxic());
 			}
 			
 			OnUpdateAdvMedicineGUI(player, timeslice);
@@ -314,7 +313,6 @@ modded class MissionGameplay
 			if (pluginSyberiaLogin)
 			{
 				pluginSyberiaLogin.CloseStethoscopeMenu();
-				pluginSyberiaLogin.CloseHomebookMenu();
 			}
 		}
 		

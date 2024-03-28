@@ -8,15 +8,10 @@ modded class ZombieBase
 		RegisterNetSyncVariableBool("m_isInventoryBlocked");
 	}
 	
-	override bool IsInventoryVisible()
+	override bool CanDisplayCargo()
 	{
 		return !m_isInventoryBlocked;
 	}
-	
-//	override bool CanDisplayCargo()
-//	{
-//		return !m_isInventoryBlocked;
-//	}
 	
 	bool IsInventoryBlocked()
 	{

@@ -74,6 +74,12 @@ class SyberiaObjectiveZone : HouseNoDestruct
     };
 };
 
+class SyberiaObjectiveZone_PSI100 : SyberiaObjectiveZone
+{
+    scope=1;
+    radius=100;
+    psi=1.0;
+};
 class SyberiaObjectiveZone_Radiation100 : SyberiaObjectiveZone
 {
     scope=1;

@@ -1,4 +1,4 @@
-class TabletsBase extends Edible_Base
+class TabletsBase: Edible_Base
 {
 	override void SetActions()
 	{
@@ -33,5 +33,15 @@ class TabletsBase extends Edible_Base
 		}
 		
 		return super.GetTooltip() + additionalText;
+	}
+};
+class TabletBottleBase: TabletsBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		
+		RemoveAction(ActionEatTabletFromWrapper);
+		AddAction(ActionEatPillFromBottle);
 	}
 };
