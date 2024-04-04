@@ -42,7 +42,7 @@ modded class InspectMenuNew
 				wetness = item_IB.GetWet();
 			}
 		}
-
+		
 		if( wetness < GameConstants.STATE_DAMP )
 		{
 			WidgetTrySetText(root_widget, "ItemWetnessWidget", "");
@@ -101,7 +101,6 @@ modded class InspectMenuNew
 						WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_water", Colors.COLOR_LIQUID);
 					break;
 				}
-					
 				case LIQUID_RIVERWATER:
 				{
 					if (temperature < 0)
@@ -110,43 +109,36 @@ modded class InspectMenuNew
 						WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_river_water", Colors.COLOR_LIQUID);
 					break;
 				}
-					
 				case LIQUID_VODKA:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_vodka", Colors.COLOR_LIQUID);
 					break;
 				}
-				
 				case LIQUID_BEER:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_beer", Colors.COLOR_LIQUID);
 					break;
 				}
-				
 				case LIQUID_GASOLINE:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_gasoline", Colors.COLOR_LIQUID);
 					break;
 				}
-				
 				case LIQUID_DIESEL:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_diesel", Colors.COLOR_LIQUID);
 					break;
 				}
-				
 				case LIQUID_DISINFECTANT:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_disinfectant", Colors.COLOR_LIQUID);
 					break;
 				}
-	
 				case LIQUID_SALINE:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "#inv_inspect_saline", Colors.COLOR_LIQUID);
 					break;
 				}
-				
 				default:
 				{
 					WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "ERROR", Colors.COLOR_LIQUID);
@@ -157,6 +149,58 @@ modded class InspectMenuNew
 		else
 		{
 			WidgetTrySetText(root_widget, "ItemLiquidTypeWidget", "");
+		}
+	}
+	
+	override static void UpdateItemInfoFoodStage(Widget root_widget, EntityAI item)
+	{
+		Edible_Base food_item = Edible_Base.Cast( item );
+		if ( food_item && food_item.HasFoodStage() )
+		{
+			ref FoodStage food_stage = food_item.GetFoodStage();
+			FoodStageType food_stage_type = food_stage.GetFoodStageType();
+			
+			switch( food_stage_type )
+			{
+				case FoodStageType.RAW:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_raw", Colors.COLOR_RAW );
+					break;
+				}
+				case FoodStageType.BAKED:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_baked", Colors.COLOR_BAKED );
+					break;
+				}
+				case FoodStageType.BOILED:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_boiled", Colors.COLOR_BOILED );
+					break;
+				}
+				case FoodStageType.DRIED:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_dried", Colors.COLOR_DRIED );
+					break;
+				}
+				case FoodStageType.BURNED:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_burned", Colors.COLOR_BURNED );
+					break;
+				}
+				case FoodStageType.ROTTEN:
+				{
+					WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_rotten", Colors.COLOR_ROTTEN );
+					break;
+				}
+			}
+		}
+		else if ( food_item && ( food_item.IsKindOf( "BakedBeansCan_OpenedRotten" ) || food_item.IsKindOf( "PeachesCan_OpenedRotten" ) || food_item.IsKindOf( "TacticalBaconCan_OpenedRotten" ) || food_item.IsKindOf( "SpaghettiCan_OpenedRotten" ) || food_item.IsKindOf( "SardinesCan_OpenedRotten" ) || food_item.IsKindOf( "TunaCan_OpenedRotten" ) || food_item.IsKindOf( "DogFoodCan_OpenedRotten" ) || food_item.IsKindOf( "CatFoodCan_OpenedRotten" ) || food_item.IsKindOf( "PorkCan_OpenedRotten" ) || food_item.IsKindOf( "Lunchmeat_OpenedRotten" ) || food_item.IsKindOf( "UnknownFoodCan_OpenedRotten" ) || food_item.IsKindOf( "Pajka_OpenedRotten" ) || food_item.IsKindOf( "Pate_OpenedRotten" ) || food_item.IsKindOf( "BrisketSpread_OpenedRotten") ) )
+		{
+			WidgetTrySetText( root_widget, "ItemFoodStageWidget", "#inv_inspect_rotten", Colors.COLOR_ROTTEN );
+		}
+		else
+		{
+			WidgetTrySetText( root_widget, "ItemFoodStageWidget", "" );
 		}
 	}
 };
